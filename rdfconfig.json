@@ -20,8 +20,7 @@
     "outDir": "public",
     "roots": [
       "http://www.w3.org/2000/01/rdf-schema#Class",
-      "https://brickschema.org/schema/Brick#Class",
-      "http://data.ashrae.org/standard223#Concept",
+      "https://brickschema.org/schema/Brick#Entity",
       "http://qudt.org/schema/qudt/Aspect",
       "http://qudt.org/schema/qudt/Concept",
       "https://www.w3.org/2002/07/owl#Thing",
