@@ -25,7 +25,14 @@
       "http://qudt.org/schema/qudt/Concept",
       "https://www.w3.org/2002/07/owl#Thing",
       "http://www.w3.org/2004/02/skos/core#Concept",
-      "https://brickschema.org/schema/Brick#EntityProperty"
+      "https://brickschema.org/schema/Brick#EntityProperty",
+      "https://w3id.org/rec#Agent",
+      "https://w3id.org/rec#Asset",
+      "https://w3id.org/rec#BuildingElement",
+      "https://w3id.org/rec#Collection",
+      "https://w3id.org/rec#Event",
+      "https://w3id.org/rec#Information",
+      "https://w3id.org/rec#Space"
     ]
   }
 }
