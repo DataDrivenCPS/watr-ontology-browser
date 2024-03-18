@@ -416,7 +416,11 @@ rec:BACnetController a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "BACnet Controller" ;
     rdfs:comment "BACnet controller." ;
-    rdfs:subClassOf rec:Controller .
+    rdfs:subClassOf rec:Controller ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:BACnetController" ;
+    brick:isReplacedBy brick:BACnet_Controller .
 
 rec:BackOffice a rdfs:Class,
         sh:NodeShape ;
@@ -641,7 +645,11 @@ rec:Controller a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Controller" ;
     rdfs:comment "Controller." ;
-    rdfs:subClassOf rec:ICTEquipment .
+    rdfs:subClassOf rec:ICTEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:Controller" ;
+    brick:isReplacedBy brick:Controller .
 
 rec:ConversationRoom a rdfs:Class,
         sh:NodeShape ;
@@ -662,7 +670,11 @@ rec:DataNetworkEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Data Network Equipment" ;
     rdfs:comment "Data network equipment." ;
-    rdfs:subClassOf rec:ICTEquipment .
+    rdfs:subClassOf rec:ICTEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:DataNetworkEquipment" ;
+    brick:isReplacedBy brick:Data_Network_Equipment .
 
 rec:DataRateObservation a <dtmi:dtdl:class:Component>,
         rdfs:Class,
@@ -699,7 +711,11 @@ rec:DaylightSensorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Daylight Sensor" ;
     rdfs:comment "Daylight sensor." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:DaylightSensorEquipment" ;
+    brick:isReplacedBy brick:Daylight_Sensor_Equipment .
 
 rec:DensityObservation a <dtmi:dtdl:class:Component>,
         rdfs:Class,
@@ -909,6 +925,7 @@ rec:EthernetPort a rdfs:Class,
     rdfs:label "Ethernet Port" ;
     rdfs:comment "Ethernet port." ;
     rdfs:subClassOf rec:DataNetworkEquipment ;
+    owl:deprecated true ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:in ( "Type1" "Type2" "Type3" "Type4" ) ;
@@ -920,13 +937,20 @@ rec:EthernetPort a rdfs:Class,
             sh:description "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second." ;
             sh:maxCount 1 ;
             sh:name "Port Speed" ;
-            sh:path rec:portSpeed ] .
+            sh:path rec:portSpeed ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:EthernetPort" ;
+    brick:isReplacedBy brick:Ethernet_Port .
 
 rec:EthernetSwitch a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Ethernet Switch" ;
     rdfs:comment "Ethernet switch." ;
-    rdfs:subClassOf rec:DataNetworkEquipment .
+    rdfs:subClassOf rec:DataNetworkEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:EthernetSwitch" ;
+    brick:isReplacedBy brick:Ethernet_Switch .
 
 rec:Event a rdfs:Class,
         sh:NodeShape ;
@@ -1165,7 +1189,11 @@ rec:IAQSensorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Indoor Air Quality Sensor" ;
     rdfs:comment "Indoor air quality sensor." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:IAQSensorEquipment" ;
+    brick:isReplacedBy brick:IAQ_Sensor_Equipment .
 
 rec:ICTEquipment a rdfs:Class,
         sh:NodeShape ;
@@ -1276,7 +1304,11 @@ rec:LeakDetectorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Leak Detector" ;
     rdfs:comment "Leak detector." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:LeakDetectorEquipment" ;
+    brick:isReplacedBy brick:Leak_Detector_Equipment .
 
 rec:Lease a rdfs:Class,
         sh:NodeShape ;
@@ -1477,7 +1509,11 @@ rec:ModbusController a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Modbus Controller" ;
     rdfs:comment "Modbus controller." ;
-    rdfs:subClassOf rec:Controller .
+    rdfs:subClassOf rec:Controller ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ModbusController" ;
+    brick:isReplacedBy brick:Modbus_Controller .
 
 rec:Morgue a rdfs:Class,
         sh:NodeShape ;
@@ -1531,7 +1567,11 @@ rec:NetworkSecurityEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Network Security Equipment" ;
     rdfs:comment "Network security equipment." ;
-    rdfs:subClassOf rec:DataNetworkEquipment .
+    rdfs:subClassOf rec:DataNetworkEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:NetworkSecurityEquipment" ;
+    brick:isReplacedBy brick:Network_Security_Equipment .
 
 rec:NotificationObject a rdfs:Class,
         sh:NodeShape ;
@@ -1555,7 +1595,11 @@ rec:OccupancySensorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Occupancy Sensor" ;
     rdfs:comment "Occupancy sensor." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:OccupancySensorEquipment" ;
+    brick:isReplacedBy brick:Occupancy_Sensor_Equipment .
 
 rec:OccupancyZone a rdfs:Class,
         sh:NodeShape ;
@@ -1646,7 +1690,11 @@ rec:PeopleCountSensorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "People Count Sensor" ;
     rdfs:comment "People count sensor." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:PeopleCountSensorEquipment" ;
+    brick:isReplacedBy brick:People_Count_Sensor_Equipment .
 
 rec:Person a rdfs:Class,
         sh:NodeShape ;
@@ -1936,6 +1984,7 @@ rec:SensorEquipment a rdfs:Class,
     rdfs:label "Sensor Equipment" ;
     rdfs:comment "Sensor equipment." ;
     rdfs:subClassOf rec:ICTEquipment ;
+    owl:deprecated true ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:double ;
             sh:name "Battery Percentage" ;
@@ -1943,13 +1992,20 @@ rec:SensorEquipment a rdfs:Class,
         [ a sh:PropertyShape ;
             sh:datatype xsd:double ;
             sh:name "Wi-Fi Signal Strength" ;
-            sh:path rec:wifiSignalStrength ] .
+            sh:path rec:wifiSignalStrength ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:SensorEquipment" ;
+    brick:isReplacedBy brick:Sensor_Equipment .
 
 rec:Server a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Server" ;
     rdfs:comment "Server." ;
-    rdfs:subClassOf rec:ICTHardware .
+    rdfs:subClassOf rec:ICTHardware ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:Server" ;
+    brick:isReplacedBy brick:Server .
 
 rec:ServiceEntrance a rdfs:Class,
         sh:NodeShape ;
@@ -2198,7 +2254,11 @@ rec:ThermostatEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Thermostat" ;
     rdfs:comment "Thermostat." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ThermostatEquipment" ;
+    brick:isReplacedBy brick:Thermostat .
 
 rec:ThrustObservation a <dtmi:dtdl:class:Component>,
         rdfs:Class,
@@ -2276,7 +2336,11 @@ rec:VibrationSensorEquipment a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Vibration Sensor" ;
     rdfs:comment "Vibration sensor." ;
-    rdfs:subClassOf rec:SensorEquipment .
+    rdfs:subClassOf rec:SensorEquipment ;
+    owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:VibrationSensorEquipment" ;
+    brick:isReplacedBy brick:Vibration_Sensor_Equipment .
 
 rec:VirtualBuilding a rdfs:Class,
         sh:NodeShape ;
@@ -2352,12 +2416,16 @@ rec:WirelessAccessPoint a rdfs:Class,
     rdfs:label "Wireless Access Point" ;
     rdfs:comment "Wireless access point." ;
     rdfs:subClassOf rec:DataNetworkEquipment ;
+    owl:deprecated true ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:in ( "WiFi4" "WiFi5" "WiFi6" "WiFi6E" "WiFi7" ) ;
             sh:maxCount 1 ;
             sh:name "Generation" ;
-            sh:path rec:generation ] .
+            sh:path rec:generation ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:WirelessAccessPoint" ;
+    brick:isReplacedBy brick:Wireless_Access_Point .
 
 rec:WorkOrder a rdfs:Class,
         sh:NodeShape ;
@@ -5612,6 +5680,27 @@ brick:Condenser_Water_Isolation_Valve a owl:Class,
         tag:Valve,
         tag:Water .
 
+brick:Condenser_Water_Loop a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Condenser Water Loop" ;
+    rdfs:subClassOf brick:Water_Loop ;
+    skos:definition "A collection of equipment that transport and regulate condenser water among each other"@en ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Condenser ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Loop ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Water ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Condenser,
+        tag:Loop,
+        tag:Water .
+
 brick:Condenser_Water_System a owl:Class,
         sh:NodeShape ;
     rdfs:label "Condenser Water System" ;
@@ -8354,12 +8443,15 @@ brick:Employee_Entrance_Lobby a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ServiceEntrance" ;
     brick:hasAssociatedTag tag:Common,
         tag:Employee,
         tag:Entrance,
         tag:Lobby,
         tag:Location,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:ServiceEntrance .
 
 brick:Enable_Differential_Enthalpy_Command a owl:Class,
         sh:NodeShape ;
@@ -8582,9 +8674,12 @@ brick:Energy_Zone a owl:Class,
             sh:object tag:Zone ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Zone" ;
     brick:hasAssociatedTag tag:Energy,
         tag:Location,
-        tag:Zone .
+        tag:Zone ;
+    brick:isReplacedBy rec:Zone .
 
 brick:Entering_Chilled_Water_Flow_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -9518,10 +9613,13 @@ brick:Exercise_Room a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ExerciseRoom" ;
     brick:hasAssociatedTag tag:Exercise,
         tag:Location,
         tag:Room,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:ExerciseRoom .
 
 brick:Exhaust_Air_Dewpoint_Sensor a owl:Class,
         sh:NodeShape ;
@@ -10679,7 +10777,7 @@ brick:Fire_Zone a owl:Class,
     rdfs:label "Fire Zone" ;
     rdfs:subClassOf brick:Zone ;
     owl:deprecated true ;
-    skos:definition "combustion chamber in a furnace or boiler."@en ;
+    skos:definition "A logical subdivision of a building that is monitored for fire; may also have a classification for the type of fire hazard that can occur"@en ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Fire ;
             sh:predicate brick:hasTag ;
@@ -10692,9 +10790,12 @@ brick:Fire_Zone a owl:Class,
             sh:object tag:Zone ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ServiceEntrance" ;
     brick:hasAssociatedTag tag:Fire,
         tag:Location,
-        tag:Zone .
+        tag:Zone ;
+    brick:isReplacedBy rec:ServiceEntrance .
 
 brick:First_Aid_Kit a owl:Class,
         sh:NodeShape ;
@@ -11101,6 +11202,26 @@ brick:Gatehouse a owl:Class,
         tag:Location,
         tag:Space .
 
+brick:Gateway a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Gateway" ;
+    rdfs:subClassOf brick:ICT_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Gateway ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Gateway,
+        tag:ICT .
+
 brick:Generator_Room a owl:Class,
         sh:NodeShape ;
     rdfs:label "Generator Room" ;
@@ -11131,12 +11252,15 @@ brick:Generator_Room a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElectricityRoom" ;
     brick:hasAssociatedTag tag:Electrical,
         tag:Generator,
         tag:Location,
         tag:Room,
         tag:Service,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:ElectricityRoom .
 
 brick:Grease_Interceptor a owl:Class,
         sh:NodeShape ;
@@ -12989,13 +13113,16 @@ brick:IDF a owl:Class,
             sh:object tag:Telecom ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
     brick:hasAssociatedTag tag:Distribution,
         tag:Frame,
         tag:IDF,
         tag:Location,
         tag:Room,
         tag:Space,
-        tag:Telecom .
+        tag:Telecom ;
+    brick:isReplacedBy rec:CableRoom .
 
 brick:Ice_Tank_Leaving_Water_Temperature_Sensor a owl:Class,
         sh:NodeShape ;
@@ -14185,10 +14312,13 @@ brick:Library a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Library" ;
     brick:hasAssociatedTag tag:Library,
         tag:Location,
         tag:Room,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:Library .
 
 brick:Light_Command a owl:Class ;
     rdfs:label "Light Command" ;
@@ -15026,13 +15156,16 @@ brick:MDF a owl:Class,
             sh:object tag:Telecom ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
     brick:hasAssociatedTag tag:Distribution,
         tag:Frame,
         tag:Location,
         tag:MDF,
         tag:Room,
         tag:Space,
-        tag:Telecom .
+        tag:Telecom ;
+    brick:isReplacedBy rec:CableRoom .
 
 brick:Mail_Room a owl:Class,
         sh:NodeShape ;
@@ -15285,10 +15418,13 @@ brick:Massage_Room a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:TherapyRoom" ;
     brick:hasAssociatedTag tag:Location,
         tag:Massage,
         tag:Room,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:TherapyRoom .
 
 brick:Max_Air_Temperature_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -20754,27 +20890,6 @@ brick:Schedule_Temperature_Setpoint a owl:Class,
         tag:Temperature ;
     brick:hasQuantity brick:Temperature .
 
-brick:Sensor_Equipment a owl:Class,
-        sh:NodeShape ;
-    rdfs:label "Sensor Equipment" ;
-    rdfs:subClassOf brick:ICT_Equipment ;
-    skos:definition "A piece of equipment for sensing some physical properties"@en ;
-    sh:rule [ a sh:TripleRule ;
-            sh:object tag:Equipment ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ],
-        [ a sh:TripleRule ;
-            sh:object tag:ICT ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ],
-        [ a sh:TripleRule ;
-            sh:object tag:Sensor ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ] ;
-    brick:hasAssociatedTag tag:Equipment,
-        tag:ICT,
-        tag:Sensor .
-
 brick:Sensor_Failure_Alarm a owl:Class,
         sh:NodeShape ;
     rdfs:label "Sensor Failure Alarm" ;
@@ -20854,12 +20969,15 @@ brick:Shared_Office a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:OfficeLandscape" ;
     brick:hasAssociatedTag tag:Enclosed,
         tag:Location,
         tag:Office,
         tag:Room,
         tag:Shared,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:OfficeLandscape .
 
 brick:Short_Cycle_Alarm a owl:Class,
         sh:NodeShape ;
@@ -20909,10 +21027,13 @@ brick:Shower a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ShowerRoom" ;
     brick:hasAssociatedTag tag:Location,
         tag:Room,
         tag:Shower,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:ShowerRoom .
 
 brick:Smoke_Detector a owl:Class,
         sh:NodeShape ;
@@ -22055,12 +22176,15 @@ brick:Team_Room a owl:Class,
             sh:object tag:Team ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:TeamRoom" ;
     brick:hasAssociatedTag tag:Enclosed,
         tag:Location,
         tag:Office,
         tag:Room,
         tag:Space,
-        tag:Team .
+        tag:Team ;
+    brick:isReplacedBy rec:TeamRoom .
 
 brick:Temperature_Adjust_Sensor a owl:Class,
         sh:NodeShape ;
@@ -22272,13 +22396,16 @@ brick:Thermal_Power_Meter a owl:Class,
         tag:Power,
         tag:Thermal .
 
-brick:Thermostat a owl:Class,
+brick:Thermostat_Equipment a owl:Class,
         sh:NodeShape ;
-    rdfs:label "Thermostat" ;
-    rdfs:subClassOf brick:HVAC_Equipment ;
-    skos:definition "An automatic control device used to maintain temperature at a fixed or adjustable setpoint."@en ;
+    rdfs:label "Thermostat Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ],
         [ a sh:TripleRule ;
@@ -22286,6 +22413,7 @@ brick:Thermostat a owl:Class,
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
     brick:hasAssociatedTag tag:Equipment,
+        tag:ICT,
         tag:Thermostat .
 
 brick:Thermostat_Status a owl:Class,
@@ -23554,10 +23682,13 @@ brick:Wardrobe a owl:Class,
             sh:object tag:Wardrobe ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CloakRoom" ;
     brick:hasAssociatedTag tag:Location,
         tag:Room,
         tag:Space,
-        tag:Wardrobe .
+        tag:Wardrobe ;
+    brick:isReplacedBy rec:CloakRoom .
 
 brick:Warm_Cool_Adjust_Sensor a owl:Class,
         sh:NodeShape ;
@@ -24351,7 +24482,7 @@ ref:ExternalReferenceShape a sh:NodeShape ;
             sh:minCount 1 ;
             sh:path skos:definition ] ;
     sh:target [ a sh:SPARQLTarget ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """
     SELECT ?this WHERE {
      ?this rdfs:subClassOf+ ref:ExternalReference .
@@ -24401,7 +24532,7 @@ bsh:Active_EnergyQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MegaW-HR unit:W-HR unit:KiloW-HR ) ;
+            sh:in ( unit:KiloW-HR unit:W-HR unit:MegaW-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24428,7 +24559,7 @@ bsh:AddDefaultEVSEChargerDirection a sh:NodeShape ;
             }
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Electric_Vehicle_Charging_Station .
 
 bsh:Alternating_Current_FrequencyQuantityShape a owl:Class,
@@ -24441,7 +24572,7 @@ bsh:Alternating_Current_FrequencyQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:GigaHZ unit:MegaHZ unit:KiloHZ unit:HZ ) ;
+            sh:in ( unit:KiloHZ unit:HZ unit:GigaHZ unit:MegaHZ ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24471,7 +24602,7 @@ bsh:Apparent_EnergyQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:KiloV-A-HR unit:MegaV-A-HR unit:V-A-HR ) ;
+            sh:in ( unit:V-A-HR unit:MegaV-A-HR unit:KiloV-A-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24481,15 +24612,15 @@ bsh:Atmospheric_PressureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:MicroATM unit:KiloGM_F-PER-MilliM2 unit:MegaPA unit:BARAD unit:N-PER-M2 unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:ATM_T unit:PSI unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:KiloBAR unit:LB_F-PER-FT2 unit:MilliPA unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:FT_H2O unit:PicoPA unit:KiloGM-PER-M-SEC2 unit:BAR unit:CentiM_H2O unit:CentiM_HG unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:MilliBAR unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:LB_F-PER-IN2 unit:KiloPA unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:BARYE ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:BuildingMeterRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -24506,7 +24637,7 @@ bsh:BuildingMeterRule a sh:NodeShape ;
             FILTER (!strStarts(str(?type), "https://brickschema.org/schema/Brick#Building_"))
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Meter .
 
 bsh:CO2_ConcentrationQuantityShape a owl:Class,
@@ -24560,7 +24691,7 @@ bsh:CollectionIncludesEquipment a sh:NodeShape ;
             }
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Collection,
         brick:Equipment,
         brick:System .
@@ -24570,15 +24701,15 @@ bsh:Current_AngleQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:MIL unit:RAD unit:MilliARCSEC unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Current_ImbalanceQuantityShape a owl:Class,
         sh:NodeShape,
@@ -24605,7 +24736,7 @@ bsh:Current_Total_Harmonic_DistortionQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:DeciB_M unit:PERCENT ) ;
+            sh:in ( unit:PERCENT unit:DeciB_M ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24622,7 +24753,7 @@ $this a ?class .
 FILTER NOT EXISTS {$this a ?newClass}
 }""" ;
             sh:message "Deprecated class is temporarily augmented by the new class" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Entity .
 
 bsh:DeprecationRule a sh:NodeShape ;
@@ -24644,14 +24775,14 @@ bsh:DeprecationRule a sh:NodeShape ;
         CONSTRUCT { $this owl:deprecated true }
         WHERE { $this brick:deprecation ?dep }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetSubjectsOf brick:deprecation .
 
 bsh:DeprecationRuleForInstances a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:sparql [ a sh:SPARQLConstraint ;
             sh:message "{$this} has type {?class} which was deprecated in version {?depver}. For now, it has been updated to also be of type {?newClass}." ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """SELECT $this ?class ?newClass ?depver WHERE {
 $this a ?class .
 ?class owl:deprecated true .
@@ -24695,15 +24826,15 @@ bsh:Differential_Dynamic_PressureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:MicroATM unit:KiloGM_F-PER-MilliM2 unit:MegaPA unit:BARAD unit:N-PER-M2 unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:PSI unit:ATM_T unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:KiloBAR unit:LB_F-PER-FT2 unit:MilliPA unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:PicoPA unit:KiloGM-PER-M-SEC2 unit:FT_H2O unit:BAR unit:CentiM_H2O unit:CentiM_HG unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:MilliBAR unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:KiloPA unit:LB_F-PER-IN2 unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:BARYE ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Differential_Static_PressureQuantityShape a owl:Class,
         sh:NodeShape,
@@ -24715,7 +24846,7 @@ bsh:Differential_Static_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:KiloGM_F-PER-MilliM2 unit:MicroATM unit:MegaPA unit:BARAD unit:N-PER-M2 unit:BARYE unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:PSI unit:ATM_T unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:MilliPA unit:KiloBAR unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:KiloGM-PER-M-SEC2 unit:FT_H2O unit:PicoPA unit:BAR unit:CentiM_HG unit:CentiM_H2O unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:KiloPA unit:LB_F-PER-IN2 unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:MilliBAR ) ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:N-PER-MilliM2 unit:BARAD unit:PSI unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MilliM_H2O unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:IN_H2O ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24725,7 +24856,7 @@ bsh:Differential_TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_R unit:DEG_F unit:K unit:PlanckTemperature unit:DEG_C unit:MilliDEG_C ) ;
+            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24740,45 +24871,59 @@ bsh:Dry_Bulb_TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:DEG_F unit:K ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Electric_EnergyQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:J unit:KiloW-HR unit:MegaV-A_Reactive-HR unit:MegaW-HR unit:KiloV-A-HR unit:V-A_Reactive-HR unit:W-HR unit:MegaV-A-HR unit:V-A-HR unit:KiloV-A_Reactive-HR ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:V-A_Reactive-HR unit:W-HR unit:KiloV-A-HR unit:KiloV-A_Reactive-HR unit:KiloW-HR unit:J unit:MegaW-HR unit:MegaV-A-HR unit:MegaV-A_Reactive-HR unit:V-A-HR ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
+bsh:EquivalentPropertyRule a sh:NodeShape ;
+    sh:rule [ a sh:SPARQLRule ;
+            sh:construct """
+CONSTRUCT {
+    ?s ?t2 ?o .
+} WHERE {
+    ?s $this ?o .
+    { $this owl:equivalentProperty ?t2 }
+    UNION
+    { ?t2 owl:equivalentProperty $this }
+}""" ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
+    sh:targetSubjectsOf owl:equivalentProperty .
 
 bsh:Formaldehyde_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PPM unit:PPB ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:FrequencyQuantityShape a owl:Class,
         sh:NodeShape,
@@ -24790,7 +24935,7 @@ bsh:FrequencyQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PER-MIN unit:MegaHZ unit:TeraHZ unit:PER-MO unit:NUM-PER-HR unit:PER-HR unit:SAMPLE-PER-SEC unit:PERCENT-PER-WK unit:NUM-PER-YR unit:NUM-PER-SEC unit:PER-WK unit:PER-DAY unit:PERCENT-PER-HR unit:PER-MilliSEC unit:PlanckFrequency unit:KiloHZ unit:GigaHZ unit:failures-in-time unit:HZ unit:PER-SEC unit:PER-YR unit:PERCENT-PER-DAY ) ;
+            sh:in ( unit:PER-YR unit:GigaHZ unit:PER-WK unit:PER-MO unit:failures-in-time unit:PERCENT-PER-HR unit:HZ unit:PER-SEC unit:NUM-PER-YR unit:SAMPLE-PER-SEC unit:MegaHZ unit:TeraHZ unit:KiloHZ unit:NUM-PER-HR unit:NUM-PER-SEC unit:PERCENT-PER-DAY unit:PER-DAY unit:PER-MilliSEC unit:PER-MIN unit:PERCENT-PER-WK unit:PER-HR unit:PlanckFrequency ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24800,7 +24945,7 @@ bsh:Gauge_PressureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:LB_F-PER-IN2 unit:MilliM_H2O unit:BAR unit:IN_H2O ) ;
+            sh:in ( unit:MilliM_H2O unit:LB_F-PER-IN2 unit:BAR unit:IN_H2O ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24815,15 +24960,15 @@ bsh:GrainsOfMoistureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:GRAIN ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:InferInverseProperties a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -24836,7 +24981,7 @@ WHERE {
 ?invP owl:inverseOf ?p .
 }
 			""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Entity .
 
 bsh:InferInverseProperties2 a sh:NodeShape ;
@@ -24850,7 +24995,7 @@ WHERE {
 ?invP owl:inverseOf ?p .
 }
 			""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Entity .
 
 bsh:InferRecValue a sh:NodeShape ;
@@ -24863,7 +25008,7 @@ WHERE {
 $this brick:value ?v
 }
 			""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetSubjectsOf brick:value .
 
 bsh:InferSymmetricProperties a sh:NodeShape ;
@@ -24878,7 +25023,7 @@ WHERE {
   ?prop a owl:SymmetricProperty .
 }
 			""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Entity .
 
 bsh:InheritEVSEChargerDirection a sh:NodeShape ;
@@ -24896,7 +25041,7 @@ bsh:InheritEVSEChargerDirection a sh:NodeShape ;
             }
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Electric_Vehicle_Charging_Port .
 
 bsh:IrradianceQuantityShape a owl:Class,
@@ -24904,15 +25049,15 @@ bsh:IrradianceQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:W-PER-CentiM2 unit:W-PER-FT2 unit:W-PER-IN2 unit:W-PER-M2 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:W-PER-M2 unit:W-PER-FT2 unit:W-PER-CentiM2 unit:W-PER-IN2 ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:LastKnownBooleanShape a owl:Class,
         sh:NodeShape ;
@@ -24967,22 +25112,7 @@ bsh:LevelQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:YD unit:M unit:FT unit:MicroM unit:DeciM unit:MilliM unit:IN unit:CentiM unit:KiloM ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:Linear_SpeedQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:FT-PER-SEC unit:KiloM-PER-SEC unit:FT-PER-HR unit:M-PER-SEC unit:MI-PER-HR unit:M-PER-HR unit:MI-PER-SEC unit:KiloM-PER-HR ) ;
+            sh:in ( unit:CentiM unit:DeciM unit:IN unit:KiloM unit:M unit:MicroM unit:MilliM unit:FT unit:YD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24991,6 +25121,21 @@ bsh:Linear_SpeedQuantityShape a owl:Class,
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
+
+bsh:Linear_SpeedQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:KiloM-PER-SEC unit:MI-PER-SEC unit:KiloM-PER-HR unit:MI-PER-HR unit:M-PER-SEC unit:M-PER-HR unit:FT-PER-HR unit:FT-PER-SEC ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:MeterInferSubclassBuildingMeter a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -25004,7 +25149,7 @@ bsh:MeterInferSubclassBuildingMeter a sh:NodeShape ;
             ?metertype rdfs:subClassOf+ brick:Building_Meter .
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Building_Meter .
 
 bsh:MeterInferSubclassNonBuildingMeter a sh:NodeShape ;
@@ -25024,7 +25169,7 @@ bsh:MeterInferSubclassNonBuildingMeter a sh:NodeShape ;
             }
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Meter .
 
 bsh:MeterInferSubstance a sh:NodeShape ;
@@ -25038,7 +25183,7 @@ bsh:MeterInferSubstance a sh:NodeShape ;
             ?meter brick:hasSubstance ?substance .
         }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Meter .
 
 bsh:MeterRelationshipRule a sh:NodeShape ;
@@ -25093,7 +25238,7 @@ CONSTRUCT {
     UNION
     { $this owl:equivalentClass ?t2 }
 }""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetSubjectsOf owl:equivalentClass .
 
 bsh:OWLEquivalentClassRule2 a sh:NodeShape ;
@@ -25107,7 +25252,7 @@ CONSTRUCT {
     UNION
     { $this owl:equivalentClass ?t2 }
 }""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetObjectsOf owl:equivalentClass .
 
 bsh:Occupancy_PercentageQuantityShape a owl:Class,
@@ -25115,15 +25260,15 @@ bsh:Occupancy_PercentageQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PERCENT ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PERCENT ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:OneLastKnownValuePerEntity a sh:NodeShape ;
     sh:property [ sh:maxCount 1 ;
@@ -25136,7 +25281,22 @@ bsh:Operative_TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:DEG_F unit:K ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
+bsh:Ozone_ConcentrationQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:PPM unit:PPB ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25146,27 +25306,12 @@ bsh:Operative_TemperatureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
 
-bsh:Ozone_ConcentrationQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
 bsh:PM10_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB unit:MicroGM-PER-M3 ) ;
+            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25186,7 +25331,7 @@ bsh:PM1_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB unit:MicroGM-PER-M3 ) ;
+            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25201,7 +25346,7 @@ bsh:PM2.5_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB unit:MicroGM-PER-M3 ) ;
+            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25211,7 +25356,7 @@ bsh:Phasor_AngleQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:MIL unit:RAD unit:MilliARCSEC unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
+            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25226,15 +25371,15 @@ bsh:Phasor_MagnitudeQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:MIL unit:RAD unit:MilliARCSEC unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:PointsHaveQuantityKinds a sh:NodeShape ;
     sh:property [ sh:class qudt:QuantityKind ;
@@ -25242,7 +25387,7 @@ bsh:PointsHaveQuantityKinds a sh:NodeShape ;
             sh:minCount 1 ;
             sh:path brick:hasQuantity ] ;
     sh:target [ a sh:SPARQLTarget ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """
           SELECT ?this
           WHERE {
@@ -25251,7 +25396,7 @@ bsh:PointsHaveQuantityKinds a sh:NodeShape ;
           }
         """ ],
         [ a sh:SPARQLTarget ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """
           SELECT ?this
           WHERE {
@@ -25265,37 +25410,37 @@ bsh:PositionQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:PERCENT ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:Power_FactorQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:UNITLESS ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:PrecipitationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:YD unit:M unit:FT unit:MicroM unit:DeciM unit:MilliM unit:IN unit:CentiM unit:KiloM ) ;
+            sh:in ( unit:CentiM unit:DeciM unit:IN unit:KiloM unit:M unit:MicroM unit:MilliM unit:FT unit:YD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25310,15 +25455,15 @@ bsh:PressureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:KiloGM_F-PER-MilliM2 unit:MicroATM unit:MegaPA unit:BARAD unit:N-PER-M2 unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:PSI unit:ATM_T unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:MilliPA unit:KiloBAR unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:KiloGM-PER-M-SEC2 unit:FT_H2O unit:PicoPA unit:BAR unit:CentiM_H2O unit:CentiM_HG unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:MilliBAR unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:KiloPA unit:LB_F-PER-IN2 unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:BARYE ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:BAR unit:MicroTORR unit:KiloBAR unit:KiloPA unit:MegaBAR unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:PSI unit:N-PER-MilliM2 unit:BARAD unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:DYN-PER-CentiM2 unit:LB_F-PER-FT2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:RDFSRangeRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -25331,7 +25476,7 @@ CONSTRUCT {
     ?ent $this ?val .
     FILTER NOT EXISTS { ?val a ?shape }
 }""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetSubjectsOf rdfs:range .
 
 bsh:RDFSSubPropertyOfRuleForEntityProperties a sh:NodeShape ;
@@ -25349,7 +25494,7 @@ bsh:RDFSSubPropertyOfRuleForEntityProperties a sh:NodeShape ;
                 ?o ?ep ?eo .
             }
         """ ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetSubjectsOf rdfs:subPropertyOf .
 
 bsh:RadianceQuantityShape a owl:Class,
@@ -25357,30 +25502,30 @@ bsh:RadianceQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:W-PER-M2-SR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:Radiant_TemperatureQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:DEG_F unit:K ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Radon_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25402,22 +25547,7 @@ bsh:Reactive_EnergyQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:KiloV-A_Reactive-HR unit:MegaV-A_Reactive-HR unit:V-A_Reactive-HR ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:Rotational_SpeedQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:RAD-PER-MIN unit:DEG-PER-SEC unit:DEG-PER-HR unit:RAD-PER-HR unit:DEG-PER-MIN unit:RAD-PER-SEC ) ;
+            sh:in ( unit:MegaV-A_Reactive-HR unit:KiloV-A_Reactive-HR unit:V-A_Reactive-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25426,6 +25556,21 @@ bsh:Rotational_SpeedQuantityShape a owl:Class,
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
+
+bsh:Rotational_SpeedQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:DEG-PER-MIN unit:DEG-PER-SEC unit:RAD-PER-SEC unit:RAD-PER-HR unit:DEG-PER-HR unit:RAD-PER-MIN ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Solar_IrradianceQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25437,7 +25582,7 @@ bsh:Solar_IrradianceQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:W-PER-M2 unit:W-PER-FT2 unit:W-PER-CentiM2 unit:W-PER-IN2 ) ;
+            sh:in ( unit:W-PER-CentiM2 unit:W-PER-FT2 unit:W-PER-IN2 unit:W-PER-M2 ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25462,15 +25607,15 @@ bsh:SpeedQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MegaHZ-M unit:RAD-PER-SEC unit:KiloM-PER-SEC unit:RAD-PER-HR unit:GigaC-PER-M3 unit:DEG-PER-MIN unit:MI-PER-HR unit:M-PER-SEC unit:HZ-M unit:FT-PER-SEC unit:RAD-PER-MIN unit:DEG-PER-SEC unit:MI-PER-SEC unit:FT3-PER-MIN-FT2 unit:KiloM-PER-HR unit:BFT unit:M-PER-HR unit:FT-PER-HR unit:DEG-PER-HR unit:GigaHZ-M ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:FT3-PER-MIN-FT2 unit:DEG-PER-HR unit:BFT unit:GigaHZ-M unit:M-PER-SEC unit:MI-PER-HR unit:DEG-PER-SEC unit:GigaC-PER-M3 unit:DEG-PER-MIN unit:RAD-PER-HR unit:KiloM-PER-HR unit:FT-PER-SEC unit:KiloM-PER-SEC unit:FT-PER-HR unit:HZ-M unit:RAD-PER-SEC unit:RAD-PER-MIN unit:M-PER-HR unit:MI-PER-SEC unit:MegaHZ-M ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Static_PressureQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25482,25 +25627,37 @@ bsh:Static_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:KiloGM_F-PER-MilliM2 unit:MicroATM unit:MegaPA unit:BARAD unit:N-PER-M2 unit:BARYE unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:PSI unit:ATM_T unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:MilliPA unit:KiloBAR unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:KiloGM-PER-M-SEC2 unit:FT_H2O unit:PicoPA unit:BAR unit:CentiM_HG unit:CentiM_H2O unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:KiloPA unit:LB_F-PER-IN2 unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:MilliBAR ) ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:N-PER-MilliM2 unit:BARAD unit:PSI unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MilliM_H2O unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:IN_H2O ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
+
+bsh:SubPropertyOfRule a sh:NodeShape ;
+    sh:rule [ a sh:SPARQLRule ;
+            sh:construct """
+CONSTRUCT {
+   ?s ?t2 ?o .
+} WHERE {
+    ?s $this ?o .
+    { $this rdfs:subPropertyOf ?t2 }
+}""" ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
+    sh:targetSubjectsOf rdfs:subPropertyOf .
 
 bsh:TVOC_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB unit:MicroGM-PER-M3 ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:TagInferenceRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -25511,10 +25668,25 @@ $this brick:hasTag ?tag .
     $this rdf:type/rdfs:subClassOf* ?class .
     ?class brick:hasAssociatedTag ?tag .
 }""" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
     sh:targetClass brick:Entity .
 
 bsh:TemperatureQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
+
+bsh:Thermal_EnergyQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
@@ -25524,25 +25696,10 @@ bsh:TemperatureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_R unit:DEG_F unit:K unit:PlanckTemperature unit:DEG_C unit:MilliDEG_C ) ;
+            sh:in ( unit:KiloCAL unit:BTU_TH unit:THM_EEC unit:KiloJ unit:TON_FG-HR unit:KiloBTU_TH unit:THM_US unit:KiloCAL_IT unit:KiloBTU_IT unit:CAL_IT unit:BTU_IT unit:GigaJ unit:J unit:KiloCAL_Mean unit:CAL_MEAN unit:KiloCAL_TH unit:CAL_15_DEG_C unit:MegaJ unit:BTU_MEAN unit:CAL_TH ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
-
-bsh:Thermal_EnergyQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:BTU_IT unit:KiloBTU_TH unit:GigaJ unit:CAL_MEAN unit:THM_US unit:KiloCAL_IT unit:KiloCAL_Mean unit:TON_FG-HR unit:BTU_TH unit:KiloCAL unit:CAL_15_DEG_C unit:CAL_IT unit:MegaJ unit:KiloJ unit:CAL_TH unit:J unit:THM_EEC unit:BTU_MEAN unit:KiloBTU_IT unit:KiloCAL_TH ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
 
 bsh:TimeQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25554,7 +25711,7 @@ bsh:TimeQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:MO unit:SH unit:DAY unit:CentiPOISE-PER-BAR unit:MIN unit:MicroH-PER-KiloOHM unit:H-PER-KiloOHM unit:SEC unit:PA-SEC-PER-BAR unit:DAY_Sidereal unit:MicroH-PER-OHM unit:YR_Sidereal unit:KiloSEC unit:MilliH-PER-OHM unit:MilliPA-SEC-PER-BAR unit:MO_Synodic unit:MO_MeanGREGORIAN unit:YR_Common unit:MO_MeanJulian unit:POISE-PER-BAR unit:YR unit:HR unit:WK unit:KiloYR unit:PlanckTime unit:MIN_Sidereal unit:MicroSEC unit:NanoSEC unit:HR_Sidereal unit:PicoSEC unit:MilliH-PER-KiloOHM unit:H-PER-OHM unit:YR_TROPICAL unit:MegaYR unit:MilliSEC ) ;
+            sh:in ( unit:SH unit:SEC unit:MilliPA-SEC-PER-BAR unit:MicroSEC unit:MIN_Sidereal unit:NanoSEC unit:KiloYR unit:H-PER-OHM unit:PA-SEC-PER-BAR unit:MO_MeanJulian unit:DAY unit:YR_TROPICAL unit:MicroH-PER-KiloOHM unit:MegaYR unit:PlanckTime unit:POISE-PER-BAR unit:MilliH-PER-KiloOHM unit:KiloSEC unit:H-PER-KiloOHM unit:YR_Sidereal unit:WK unit:MO_Synodic unit:YR unit:MIN unit:MilliH-PER-OHM unit:HR unit:DAY_Sidereal unit:MicroH-PER-OHM unit:YR_Common unit:MO_MeanGREGORIAN unit:HR_Sidereal unit:MO unit:CentiPOISE-PER-BAR unit:PicoSEC unit:MilliSEC ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25562,7 +25719,7 @@ bsh:TimeQuantityShape a owl:Class,
 bsh:TimeseriesReferenceOnPointsConstraint a sh:NodeShape ;
     sh:sparql [ a sh:SPARQLConstraint ;
             sh:message "Only Brick Points can have external timeseries references" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """
             SELECT $this
             WHERE {
@@ -25583,7 +25740,7 @@ bsh:Velocity_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PlanckPressure unit:GigaPA unit:MegaBAR unit:KiloLB_F-PER-IN2 unit:N-PER-MilliM2 unit:TORR unit:MicroATM unit:KiloGM_F-PER-MilliM2 unit:MegaPA unit:BARAD unit:N-PER-M2 unit:MilliM_HGA unit:ATM unit:MicroTORR unit:KiloGM_F-PER-M2 unit:PSI unit:ATM_T unit:MegaPSI unit:IN_H2O unit:CentiBAR unit:KIP_F-PER-IN2 unit:KiloBAR unit:LB_F-PER-FT2 unit:MilliPA unit:DYN-PER-CentiM2 unit:MicroPA unit:HectoBAR unit:PDL-PER-FT2 unit:IN_HG unit:PicoPA unit:KiloGM-PER-M-SEC2 unit:FT_H2O unit:BAR unit:CentiM_H2O unit:CentiM_HG unit:MilliM_H2O unit:KiloGM_F-PER-CentiM2 unit:FT_HG unit:HectoPA unit:MilliBAR unit:GM_F-PER-CentiM2 unit:MicroBAR unit:MilliM_HG unit:MilliTORR unit:KiloPA_A unit:DecaPA unit:KiloPA unit:LB_F-PER-IN2 unit:PA unit:N-PER-CentiM2 unit:DeciBAR unit:BARYE ) ;
+            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25591,7 +25748,7 @@ bsh:Velocity_PressureQuantityShape a owl:Class,
 bsh:VirtualMeterRule a sh:NodeShape ;
     sh:sparql [ a sh:SPARQLConstraint ;
             sh:message "Only meters can have the isVirtualMeter property be true" ;
-            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ;
             sh:select """
             SELECT $this WHERE {
                 $this brick:isVirtualMeter/brick:value true .
@@ -25605,15 +25762,15 @@ bsh:Voltage_AngleQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:MIL unit:RAD unit:MilliARCSEC unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Voltage_ImbalanceQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25635,7 +25792,22 @@ bsh:VolumeQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MegaL unit:PINT unit:TBSP unit:DeciL unit:TSP unit:YD3 unit:NanoL unit:OZ_VOL_UK unit:DeciM3 unit:QT_UK unit:RT unit:L unit:Standard unit:M3 unit:CentiM3 unit:GT unit:BBL_UK_PET unit:FemtoL unit:BBL_US unit:FT3 unit:QT_US unit:PicoL unit:HectoL unit:PINT_UK unit:Kilo-FT3 unit:MI3 unit:MilliL unit:PK_UK unit:KiloL unit:MicroM3 unit:GI_US unit:FBM unit:ANGSTROM3 unit:AC-FT unit:TON_SHIPPING_US unit:GI_UK unit:DecaM3 unit:DecaL unit:BBL unit:PlanckVolume unit:STR unit:IN3 unit:MilliM3 unit:MicroL ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:DecaL unit:OZ_VOL_UK unit:GI_UK unit:MI3 unit:RT unit:DeciM3 unit:AC-FT unit:BBL unit:QT_US unit:FT3 unit:YD3 unit:DecaM3 unit:GT unit:Standard unit:PK_UK unit:MilliM3 unit:L unit:FBM unit:TBSP unit:HectoL unit:TSP unit:MilliL unit:QT_UK unit:STR unit:MegaL unit:BBL_US unit:ANGSTROM3 unit:MicroL unit:KiloL unit:PINT unit:FemtoL unit:DeciL unit:NanoL unit:PlanckVolume unit:IN3 unit:M3 unit:GI_US unit:Kilo-FT3 unit:PicoL unit:TON_SHIPPING_US unit:BBL_UK_PET unit:MicroM3 unit:CentiM3 unit:PINT_UK ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
+bsh:Wet_Bulb_TemperatureQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25645,27 +25817,12 @@ bsh:VolumeQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
 
-bsh:Wet_Bulb_TemperatureQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:DEG_F unit:K ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
 bsh:Wind_DirectionQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:MIL unit:RAD unit:MilliARCSEC unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
+            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25714,6 +25871,26 @@ bsh:isPartOfShape a sh:PropertyShape ;
     sh:path brick:isPartOf .
 
 rec:AssetCollection a sh:NodeShape .
+
+rec:ICTRack owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Rack" ;
+    brick:isReplacedBy brick:ICT_Rack .
+
+rec:ICT_Equipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Equipment" ;
+    brick:isReplacedBy brick:ICT_Equipment .
+
+rec:ICT_Hardware owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Hardware" ;
+    brick:isReplacedBy brick:ICT_Hardware .
+
+rec:Network_Router owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:NetworkRouter" ;
+    brick:isReplacedBy brick:Network_Router .
 
 rec:substance a owl:AnnotationProperty ;
     rdfs:label "substance" ;
@@ -26182,6 +26359,26 @@ brick:Average_Discharge_Air_Flow_Sensor a owl:Class,
     owl:equivalentClass brick:Average_Supply_Air_Flow_Sensor ;
     skos:definition "The computed average flow of discharge air over some interval"@en ;
     brick:aliasOf brick:Average_Supply_Air_Flow_Sensor .
+
+brick:BACnet_Controller a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "BACnet Controller" ;
+    rdfs:subClassOf brick:Controller ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:BACnet ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Controller ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:BACnet,
+        tag:Controller,
+        tag:Equipment .
 
 brick:Blowdown_Water a brick:Substance ;
     rdfs:label "Blowdown Water" ;
@@ -26658,6 +26855,31 @@ brick:Damper_Command a owl:Class,
         tag:Damper,
         tag:Point .
 
+brick:Daylight_Sensor_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Daylight Sensor Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Daylight ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Daylight,
+        tag:Equipment,
+        tag:ICT,
+        tag:Sensor .
+
 brick:Deceleration_Time a brick:Quantity ;
     rdfs:label "Deceleration Time" ;
     skos:broader brick:Time .
@@ -26688,11 +26910,6 @@ brick:DeprecationShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            skos:definition "The version in which the entity was deprecated" ;
-            sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path brick:deprecatedInVersion ],
-        [ a sh:PropertyShape ;
             skos:definition "A SHACL rule which will mitigate the deprecation" ;
             sh:class sh:NodeShape ;
             sh:path brick:deprecationMitigationRule ],
@@ -26700,7 +26917,12 @@ brick:DeprecationShape a owl:Class,
             skos:definition "A message describing how to mitigate or address the deprecation" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path brick:deprecationMitigationMessage ] .
+            sh:path brick:deprecationMitigationMessage ],
+        [ a sh:PropertyShape ;
+            skos:definition "The version in which the entity was deprecated" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path brick:deprecatedInVersion ] .
 
 brick:Differential_Dry_Bulb_Temperature a brick:Quantity ;
     rdfs:label "Differential Dry Bulb Temperature" ;
@@ -27244,7 +27466,10 @@ brick:Elevator_Space a owl:Class,
     owl:deprecated true ;
     owl:equivalentClass brick:Elevator_Shaft ;
     skos:definition "The vertical space in whcih an elevator ascends and descends"@en ;
-    brick:aliasOf brick:Elevator_Shaft .
+    brick:aliasOf brick:Elevator_Shaft ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElevatorShaft" ;
+    brick:isReplacedBy rec:ElevatorShaft .
 
 brick:Embedded_Temperature_Sensor a owl:Class,
         sh:NodeShape ;
@@ -27956,6 +28181,46 @@ brick:Enthalpy_Sensor a owl:Class,
         tag:Sensor ;
     brick:hasQuantity qudtqk:Enthalpy .
 
+brick:Ethernet_Port a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Ethernet Port" ;
+    rdfs:subClassOf brick:Data_Network_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Ethernet ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Port ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Ethernet,
+        tag:Port .
+
+brick:Ethernet_Switch a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Ethernet Switch" ;
+    rdfs:subClassOf brick:Data_Network_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Ethernet ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Switch ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Ethernet,
+        tag:Switch .
+
 brick:Exhaust_Air_Flow_Integral_Time_Parameter a owl:Class,
         sh:NodeShape ;
     rdfs:label "Exhaust Air Flow Integral Time Parameter" ;
@@ -28245,11 +28510,14 @@ brick:Food_Service_Room a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:FoodHandlingRoom" ;
     brick:hasAssociatedTag tag:Food,
         tag:Location,
         tag:Room,
         tag:Service,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:FoodHandlingRoom .
 
 brick:Frequency_Sensor a owl:Class,
         sh:NodeShape ;
@@ -28299,8 +28567,11 @@ brick:Furniture a owl:Class,
             sh:object tag:Furniture ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Furniture" ;
     brick:hasAssociatedTag tag:Equipment,
-        tag:Furniture .
+        tag:Furniture ;
+    brick:isReplacedBy rec:Furniture .
 
 brick:Gas_Meter a owl:Class,
         sh:NodeShape ;
@@ -28641,25 +28912,50 @@ brick:Hot_Water_System_Enable_Command a owl:Class,
         tag:System,
         tag:Water .
 
-brick:ICT_Hardware a owl:Class,
+brick:IAQ_Sensor_Equipment a owl:Class,
         sh:NodeShape ;
-    rdfs:label "ICT Hardware" ;
+    rdfs:label "IAQ Sensor Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:IAQ ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:IAQ,
+        tag:ICT,
+        tag:Sensor .
+
+brick:ICT_Rack a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "ICT Rack" ;
     rdfs:subClassOf brick:ICT_Equipment ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Equipment ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ],
         [ a sh:TripleRule ;
-            sh:object tag:Hardware ;
+            sh:object tag:ICT ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ],
         [ a sh:TripleRule ;
-            sh:object tag:ICT ;
+            sh:object tag:Rack ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
     brick:hasAssociatedTag tag:Equipment,
-        tag:Hardware,
-        tag:ICT .
+        tag:ICT,
+        tag:Rack .
 
 brick:Ice a brick:Substance ;
     rdfs:label "Ice" ;
@@ -28794,6 +29090,31 @@ brick:Leak_Alarm a owl:Class,
     brick:hasAssociatedTag tag:Alarm,
         tag:Leak,
         tag:Point .
+
+brick:Leak_Detector_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Leak Detector Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Detector ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Leak ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Detector,
+        tag:Equipment,
+        tag:ICT,
+        tag:Leak .
 
 brick:Leaving_Hot_Water_Temperature_High_Reset_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -29321,10 +29642,13 @@ brick:Medical_Room a owl:Class,
             sh:object tag:Space ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:HealthcareRoom" ;
     brick:hasAssociatedTag tag:Location,
         tag:Medical,
         tag:Room,
-        tag:Space .
+        tag:Space ;
+    brick:isReplacedBy rec:HealthcareRoom .
 
 brick:Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Status a owl:Class,
         sh:NodeShape ;
@@ -29493,6 +29817,26 @@ brick:Min_Unoccupied_Heating_Discharge_Air_Flow_Setpoint_Limit a owl:Class,
     owl:equivalentClass brick:Min_Unoccupied_Heating_Supply_Air_Flow_Setpoint_Limit ;
     brick:aliasOf brick:Min_Unoccupied_Heating_Supply_Air_Flow_Setpoint_Limit .
 
+brick:Modbus_Controller a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Modbus Controller" ;
+    rdfs:subClassOf brick:Controller ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Controller ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Modbus ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Controller,
+        tag:Equipment,
+        tag:Modbus .
+
 brick:Motion_Sensor a owl:Class,
         sh:NodeShape ;
     rdfs:label "Motion Sensor" ;
@@ -29544,6 +29888,46 @@ brick:NVR a owl:Class,
     owl:equivalentClass brick:Network_Video_Recorder ;
     brick:aliasOf brick:Network_Video_Recorder .
 
+brick:Network_Router a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Network Router" ;
+    rdfs:subClassOf brick:Data_Network_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Network ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Router ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Network,
+        tag:Router .
+
+brick:Network_Security_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Network Security Equipment" ;
+    rdfs:subClassOf brick:Data_Network_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Network ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Security ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Network,
+        tag:Security .
+
 brick:Occupancy_Percentage a brick:Quantity ;
     rdfs:label "Occupancy_Percentage" ;
     qudt:applicableUnit unit:PERCENT ;
@@ -29553,6 +29937,31 @@ brick:Occupancy_Percentage a brick:Quantity ;
         brick:Occupancy ;
     skos:definition "Percent of total occupancy of space that is occupied",
         "Percent of total occupancy of space that is occupied"@en .
+
+brick:Occupancy_Sensor_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Occupancy Sensor Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Occupancy ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:ICT,
+        tag:Occupancy,
+        tag:Sensor .
 
 brick:Occupancy_Status a owl:Class,
         sh:NodeShape ;
@@ -29995,6 +30404,36 @@ brick:PV_Current_Output_Sensor a owl:Class,
     skos:definition "See Photovoltaic_Current_Output_Sensor"@en ;
     brick:aliasOf brick:Photovoltaic_Current_Output_Sensor .
 
+brick:People_Count_Sensor_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "People Count Sensor Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Count ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:People ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Count,
+        tag:Equipment,
+        tag:ICT,
+        tag:People,
+        tag:Sensor .
+
 brick:Phasor_Magnitude a brick:Quantity ;
     rdfs:label "PhasorMagnitude" ;
     qudt:applicableUnit unit:ARCMIN,
@@ -30319,6 +30758,31 @@ brick:Separation_Tank a owl:Class,
             sh:subject sh:this ] ;
     brick:hasAssociatedTag tag:Equipment,
         tag:Tank .
+
+brick:Server a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Server" ;
+    rdfs:subClassOf brick:ICT_Hardware ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Hardware ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Server ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Hardware,
+        tag:ICT,
+        tag:Server .
 
 brick:Shading_System a owl:Class,
         sh:NodeShape ;
@@ -30878,6 +31342,23 @@ brick:Thermal_Power_Sensor a owl:Class,
         tag:Thermal ;
     brick:hasQuantity qudtqk:Power .
 
+brick:Thermostat a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Thermostat" ;
+    rdfs:subClassOf brick:HVAC_Equipment,
+        brick:Sensor_Equipment ;
+    skos:definition "An automatic control device used to maintain temperature at a fixed or adjustable setpoint."@en ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Thermostat ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:Thermostat .
+
 brick:Torque_Sensor a owl:Class,
         sh:NodeShape ;
     rdfs:label "Torque Sensor" ;
@@ -31132,6 +31613,31 @@ brick:Velocity_Pressure_Sensor a owl:Class ;
     skos:definition "Measures the difference between total pressure and static pressure"@en ;
     brick:hasQuantity brick:Pressure .
 
+brick:Vibration_Sensor_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Vibration Sensor Equipment" ;
+    rdfs:subClassOf brick:Sensor_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Vibration ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:ICT,
+        tag:Sensor,
+        tag:Vibration .
+
 brick:Voltage_Alarm a owl:Class,
         sh:NodeShape ;
     rdfs:label "Voltage Alarm" ;
@@ -31200,11 +31706,36 @@ brick:Water_Usage_Sensor a owl:Class,
         tag:Water ;
     brick:hasQuantity qudtqk:Volume .
 
+brick:Wireless_Access_Point a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Wireless Access Point" ;
+    rdfs:subClassOf brick:Data_Network_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Access ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Point ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Wireless ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Access,
+        tag:Equipment,
+        tag:Point,
+        tag:Wireless .
+
 brick:aggregate a brick:EntityProperty ;
     rdfs:label "Aggregate" ;
     skos:definition "Description of how the dta for this point is aggregated" .
 
-brick:aggregationFunction a owl:ObjectProperty .
+brick:aggregationFunction a owl:DatatypeProperty .
 
 brick:aggregationInterval a owl:DatatypeProperty .
 
@@ -31464,15 +31995,15 @@ bsh:AggregationShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            skos:definition "Interval expressed in an ISO 8601 Duration string, e.g. RP1D" ;
-            sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path brick:aggregationInterval ],
-        [ a sh:PropertyShape ;
             skos:definition "The aggregation function applied to data in the interval which produces the value" ;
             sh:in ( "max" "min" "count" "mean" "sum" "median" "mode" ) ;
             sh:minCount 1 ;
-            sh:path brick:aggregationFunction ] .
+            sh:path brick:aggregationFunction ],
+        [ a sh:PropertyShape ;
+            skos:definition "Interval expressed in an ISO 8601 Duration string, e.g. RP1D" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path brick:aggregationInterval ] .
 
 bsh:AzimuthShape a owl:Class,
         sh:NodeShape,
@@ -31486,7 +32017,7 @@ bsh:AzimuthShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:RAD unit:MIL unit:MilliARCSEC unit:MIN_Angle unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
+            sh:in ( unit:MicroRAD unit:MilliARCSEC unit:ARCSEC unit:DEG unit:REV unit:MIN_Angle unit:GRAD unit:ARCMIN unit:MilliRAD unit:MIL unit:GON unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -31523,11 +32054,11 @@ bsh:CoordinateShape a owl:Class,
     sh:property [ a sh:PropertyShape ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:longitude ],
+            sh:path brick:latitude ],
         [ a sh:PropertyShape ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:latitude ] .
+            sh:path brick:longitude ] .
 
 bsh:CurrentFlowTypeShape a owl:Class,
         sh:NodeShape,
@@ -31584,7 +32115,22 @@ bsh:TemperatureCoefficientPerDegreeCelsiusShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
             sh:in ( unit:PERCENT ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
+bsh:TiltShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MicroRAD unit:MilliARCSEC unit:ARCSEC unit:DEG unit:REV unit:MIN_Angle unit:GRAD unit:ARCMIN unit:MilliRAD unit:MIL unit:GON unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -31593,21 +32139,6 @@ bsh:TemperatureCoefficientPerDegreeCelsiusShape a owl:Class,
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
-
-bsh:TiltShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:GRAD unit:GON unit:DEG unit:RAD unit:MIL unit:MilliARCSEC unit:MIN_Angle unit:MilliRAD unit:ARCSEC unit:MicroRAD unit:ARCMIN unit:REV ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
 
 bsh:VirtualMeterShape a owl:Class,
         sh:NodeShape,
@@ -32393,13 +32924,13 @@ brick:Break_Room a owl:Class,
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
     brick:deprecatedInVersion "1.4.0" ;
-    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:BasementLevel" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:StaffRoom" ;
     brick:hasAssociatedTag tag:Break,
         tag:Breakroom,
         tag:Location,
         tag:Room,
         tag:Space ;
-    brick:isReplacedBy rec:BasementLevel .
+    brick:isReplacedBy rec:StaffRoom .
 
 brick:Bypass_Valve a owl:Class,
         sh:NodeShape ;
@@ -33125,12 +33656,15 @@ brick:Distribution_Frame a owl:Class,
             sh:object tag:Telecom ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
     brick:hasAssociatedTag tag:Distribution,
         tag:Frame,
         tag:Location,
         tag:Room,
         tag:Space,
-        tag:Telecom .
+        tag:Telecom ;
+    brick:isReplacedBy rec:CableRoom .
 
 brick:Domestic_Hot_Water_Temperature_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -33488,11 +34022,14 @@ brick:Elevator_Shaft a owl:Class,
             sh:object tag:Vertical ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElevatorShaft" ;
     brick:hasAssociatedTag tag:Elevator,
         tag:Location,
         tag:Shaft,
         tag:Space,
-        tag:Vertical .
+        tag:Vertical ;
+    brick:isReplacedBy rec:ElevatorShaft .
 
 brick:Embedded_Surface_System_Panel a owl:Class,
         sh:NodeShape ;
@@ -38835,15 +39372,6 @@ brick:hasAssociatedTag a owl:AsymmetricProperty,
     owl:inverseOf brick:isAssociatedWith ;
     skos:definition "The class is associated with the given tag"@en .
 
-brick:hasPoint a owl:AsymmetricProperty,
-        owl:IrreflexiveProperty,
-        owl:ObjectProperty ;
-    rdfs:label "Has point" ;
-    rdfs:subPropertyOf brick:Relationship ;
-    owl:equivalentProperty rec:hasPoint ;
-    owl:inverseOf brick:isPointOf ;
-    skos:definition "The subject has a source of telemetry identified by the object. In some systems the source of telemetry may be represented as a digital/analog input/output point"@en .
-
 brick:hasSubMeter a owl:AsymmetricProperty,
         owl:IrreflexiveProperty,
         owl:ObjectProperty ;
@@ -38865,6 +39393,7 @@ brick:isLocationOf a owl:AsymmetricProperty,
         owl:ObjectProperty ;
     rdfs:label "Is location of" ;
     rdfs:subPropertyOf brick:Relationship ;
+    owl:equivalentProperty rec:isLocationOf ;
     owl:inverseOf brick:hasLocation ;
     skos:definition "Subject is the physical location encapsulating the object"@en .
 
@@ -38903,7 +39432,7 @@ brick:powerComplexity brick:deprecation [ brick:deprecatedInVersion "1.3.1" ;
             } WHERE {
               $this brick:powerComplexity ?prop .
             }""" ;
-                            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+                            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
                     sh:targetSubjectsOf brick:powerComplexity ] ;
             brick:deprecationMitigationMessage "powerComplexity is deprecated in favor of electricalComplexPower because the latter is more clear" ],
         [ brick:deprecatedInVersion "1.3.1" ;
@@ -38915,7 +39444,7 @@ brick:powerComplexity brick:deprecation [ brick:deprecatedInVersion "1.3.1" ;
             } WHERE {
               $this brick:powerComplexity ?prop .
             }""" ;
-                            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+                            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
                     sh:targetSubjectsOf brick:powerComplexity ] ;
             brick:deprecationMitigationMessage "powerComplexity is deprecated in favor of electricalComplexPower because the latter is more clear" ] .
 
@@ -38928,7 +39457,7 @@ brick:powerFlow brick:deprecation [ brick:deprecatedInVersion "1.3.1" ;
             } WHERE {
               $this brick:powerFlow ?prop .
             }""" ;
-                            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+                            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
                     sh:targetSubjectsOf brick:powerFlow ] ;
             brick:deprecationMitigationMessage "powerFlow is deprecated in favor of electricalFlow as the latter is more clear" ],
         [ brick:deprecatedInVersion "1.3.1" ;
@@ -38940,7 +39469,7 @@ brick:powerFlow brick:deprecation [ brick:deprecatedInVersion "1.3.1" ;
             } WHERE {
               $this brick:powerFlow ?prop .
             }""" ;
-                            sh:prefixes <https://brickschema.org/schema/1.4-rc1/Brick> ] ;
+                            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
                     sh:targetSubjectsOf brick:powerFlow ] ;
             brick:deprecationMitigationMessage "powerFlow is deprecated in favor of electricalFlow as the latter is more clear" ] .
 
@@ -39111,6 +39640,9 @@ tag:Availability a brick:Tag ;
 tag:Azimuth a brick:Tag ;
     rdfs:label "Azimuth" .
 
+tag:BACnet a brick:Tag ;
+    rdfs:label "BACnet" .
+
 tag:Backflow a brick:Tag ;
     rdfs:label "Backflow" .
 
@@ -39207,9 +39739,6 @@ tag:Cooler a brick:Tag ;
 tag:Copy a brick:Tag ;
     rdfs:label "Copy" .
 
-tag:Count a brick:Tag ;
-    rdfs:label "Count" .
-
 tag:Cubicle a brick:Tag ;
     rdfs:label "Cubicle" .
 
@@ -39224,6 +39753,12 @@ tag:DDAHU a brick:Tag ;
 
 tag:DOAS a brick:Tag ;
     rdfs:label "DOAS" .
+
+tag:Data a brick:Tag ;
+    rdfs:label "Data" .
+
+tag:Daylight a brick:Tag ;
+    rdfs:label "Daylight" .
 
 tag:Dc a brick:Tag ;
     rdfs:label "Dc" .
@@ -39330,6 +39865,9 @@ tag:Frost a brick:Tag ;
 tag:Gatehouse a brick:Tag ;
     rdfs:label "Gatehouse" .
 
+tag:Gateway a brick:Tag ;
+    rdfs:label "Gateway" .
+
 tag:Glycool a brick:Tag ;
     rdfs:label "Glycool" .
 
@@ -39377,6 +39915,9 @@ tag:Humidification a brick:Tag ;
 
 tag:Humidify a brick:Tag ;
     rdfs:label "Humidify" .
+
+tag:IAQ a brick:Tag ;
+    rdfs:label "IAQ" .
 
 tag:IDF a brick:Tag ;
     rdfs:label "IDF" .
@@ -39453,6 +39994,9 @@ tag:Methane a brick:Tag ;
 tag:Mixing a brick:Tag ;
     rdfs:label "Mixing" .
 
+tag:Modbus a brick:Tag ;
+    rdfs:label "Modbus" .
+
 tag:Month a brick:Tag ;
     rdfs:label "Month" .
 
@@ -39467,9 +40011,6 @@ tag:NO2 a brick:Tag ;
 
 tag:NVR a brick:Tag ;
     rdfs:label "NVR" .
-
-tag:Network a brick:Tag ;
-    rdfs:label "Network" .
 
 tag:No a brick:Tag ;
     rdfs:label "No" .
@@ -39498,6 +40039,9 @@ tag:Passive a brick:Tag ;
 tag:Peak a brick:Tag ;
     rdfs:label "Peak" .
 
+tag:People a brick:Tag ;
+    rdfs:label "People" .
+
 tag:Phone a brick:Tag ;
     rdfs:label "Phone" .
 
@@ -39512,9 +40056,6 @@ tag:PlugStrip a brick:Tag ;
 
 tag:Plumbing a brick:Tag ;
     rdfs:label "Plumbing" .
-
-tag:Port a brick:Tag ;
-    rdfs:label "Port" .
 
 tag:Portfolio a brick:Tag ;
     rdfs:label "Portfolio" .
@@ -39554,6 +40095,9 @@ tag:RTU a brick:Tag ;
 
 tag:RVAV a brick:Tag ;
     rdfs:label "RVAV" .
+
+tag:Rack a brick:Tag ;
+    rdfs:label "Rack" .
 
 tag:Radiation a brick:Tag ;
     rdfs:label "Radiation" .
@@ -39609,6 +40153,9 @@ tag:Retail a brick:Tag ;
 tag:Reversing a brick:Tag ;
     rdfs:label "Reversing" .
 
+tag:Router a brick:Tag ;
+    rdfs:label "Router" .
+
 tag:Sash a brick:Tag ;
     rdfs:label "Sash" .
 
@@ -39620,9 +40167,6 @@ tag:Seismic a brick:Tag ;
 
 tag:Selector a brick:Tag ;
     rdfs:label "Selector" .
-
-tag:Server a brick:Tag ;
-    rdfs:label "Server" .
 
 tag:Shaft a brick:Tag ;
     rdfs:label "Shaft" .
@@ -39711,6 +40255,9 @@ tag:VAV a brick:Tag ;
 tag:Vent a brick:Tag ;
     rdfs:label "Vent" .
 
+tag:Vibration a brick:Tag ;
+    rdfs:label "Vibration" .
+
 tag:Visitor a brick:Tag ;
     rdfs:label "Visitor" .
 
@@ -39734,6 +40281,9 @@ tag:Window a brick:Tag ;
 
 tag:Wing a brick:Tag ;
     rdfs:label "Wing" .
+
+tag:Wireless a brick:Tag ;
+    rdfs:label "Wireless" .
 
 tag:Workshop a brick:Tag ;
     rdfs:label "Workshop" .
@@ -39982,6 +40532,26 @@ brick:Computer_Room_Air_Conditioning a owl:Class,
         tag:Conditioning,
         tag:Equipment,
         tag:Room .
+
+brick:Controller a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Controller" ;
+    rdfs:subClassOf brick:ICT_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Controller ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Controller,
+        tag:Equipment,
+        tag:ICT .
 
 brick:Cooling_Discharge_Air_Flow_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -40586,13 +41156,16 @@ brick:Humidity_Parameter a owl:Class,
         tag:Parameter,
         tag:Point .
 
-brick:ICT_Equipment a owl:Class,
+brick:ICT_Hardware a owl:Class,
         sh:NodeShape ;
-    rdfs:label "ICT Equipment" ;
-    rdfs:subClassOf brick:Equipment ;
-    skos:definition "Information and Communications Technology (ICT) equipment operates with a processor to process data or logic and create digital signals."@en ;
+    rdfs:label "ICT Hardware" ;
+    rdfs:subClassOf brick:ICT_Equipment ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Hardware ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ],
         [ a sh:TripleRule ;
@@ -40600,6 +41173,7 @@ brick:ICT_Equipment a owl:Class,
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
     brick:hasAssociatedTag tag:Equipment,
+        tag:Hardware,
         tag:ICT .
 
 brick:Load_Shed_Command a owl:Class,
@@ -41770,22 +42344,6 @@ brick:Water_Level_Alarm a owl:Class,
         tag:Point,
         tag:Water .
 
-brick:Water_Loop a owl:Class,
-        sh:NodeShape ;
-    rdfs:label "Water Loop" ;
-    rdfs:subClassOf brick:Loop ;
-    skos:definition "A collection of equipment that transport and regulate water among each other"@en ;
-    sh:rule [ a sh:TripleRule ;
-            sh:object tag:Loop ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ],
-        [ a sh:TripleRule ;
-            sh:object tag:Water ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ] ;
-    brick:hasAssociatedTag tag:Loop,
-        tag:Water .
-
 brick:Water_Meter a owl:Class,
         sh:NodeShape ;
     rdfs:label "Water Meter" ;
@@ -41966,16 +42524,16 @@ bsh:EfficiencyShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PERCENT ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PERCENT ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:LastKnownDoubleShape a owl:Class,
         sh:NodeShape ;
@@ -41998,15 +42556,15 @@ bsh:TemperatureShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_R unit:DEG_F unit:K unit:PlanckTemperature unit:DEG_C unit:MilliDEG_C ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:isMeteredByShape a sh:PropertyShape ;
     sh:class brick:Meter ;
@@ -42709,7 +43267,7 @@ brick:Lighting_Equipment a owl:Class,
         sh:NodeShape ;
     rdfs:label "Lighting Equipment" ;
     rdfs:subClassOf brick:Equipment ;
-    sh:property [ sh:or ( [ sh:class brick:Lighting_Equipment ] [ sh:class brick:Location ] ) ;
+    sh:property [ sh:or ( [ sh:class brick:Lighting_Equipment ] [ sh:class rec:Space ] ) ;
             sh:path brick:feeds ],
         [ sh:or ( [ sh:class brick:Lighting_Equipment ] [ sh:class brick:Electrical_Equipment ] ) ;
             sh:path brick:hasPart ] ;
@@ -43013,9 +43571,12 @@ brick:Outdoor_Area a owl:Class,
             sh:object tag:Outdoor ;
             sh:predicate brick:hasTag ;
             sh:subject sh:this ] ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:OutdoorSpace" ;
     brick:hasAssociatedTag tag:Area,
         tag:Location,
-        tag:Outdoor .
+        tag:Outdoor ;
+    brick:isReplacedBy rec:OutdoorSpace .
 
 brick:PID_Parameter a owl:Class,
         sh:NodeShape ;
@@ -43593,32 +44154,31 @@ brick:Water_Differential_Temperature_Sensor a owl:Class,
     brick:hasQuantity brick:Differential_Temperature ;
     brick:hasSubstance brick:Water .
 
+brick:Water_Loop a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Water Loop" ;
+    rdfs:subClassOf brick:Loop ;
+    skos:definition "A collection of equipment that transport and regulate water among each other"@en ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Loop ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Water ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Loop,
+        tag:Water .
+
 brick:area a brick:EntityProperty ;
     rdfs:label "Area" ;
     skos:definition "Entity has 2-dimensional area" .
-
-brick:hasLocation a owl:AsymmetricProperty,
-        owl:IrreflexiveProperty,
-        owl:ObjectProperty ;
-    rdfs:label "Has location" ;
-    rdfs:subPropertyOf brick:Relationship ;
-    owl:equivalentProperty rec:locatedIn ;
-    owl:inverseOf brick:isLocationOf ;
-    skos:definition "Subject is physically located in the location given by the object"@en .
 
 brick:hasQuantity a owl:AsymmetricProperty,
         owl:IrreflexiveProperty ;
     rdfs:label "Has Quantity" ;
     rdfs:subPropertyOf qudt:hasQuantityKind,
         brick:Relationship .
-
-brick:isPartOf a owl:AsymmetricProperty,
-        owl:IrreflexiveProperty,
-        owl:ObjectProperty ;
-    rdfs:label "Is part of" ;
-    rdfs:subPropertyOf brick:Relationship ;
-    owl:equivalentProperty rec:isPartOf ;
-    owl:inverseOf brick:hasPart .
 
 brick:meters a owl:AsymmetricProperty,
         owl:IrreflexiveProperty,
@@ -43639,15 +44199,15 @@ bsh:AreaShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:FT2 unit:M2 ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:FT2 unit:M2 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:PowerQuantityShape a owl:Class,
         sh:NodeShape,
@@ -43657,9 +44217,6 @@ bsh:PowerQuantityShape a owl:Class,
             skos:definition "The ambient temperature at which the power input was measured" ;
             sh:class bsh:TemperatureShape ;
             sh:path brick:ambientTemperatureOfMeasurement ] .
-
-tag:Access a brick:Tag ;
-    rdfs:label "Access" .
 
 tag:Aid a brick:Tag ;
     rdfs:label "Aid" .
@@ -43706,6 +44263,9 @@ tag:Core a brick:Tag ;
 tag:Correlated a brick:Tag ;
     rdfs:label "Correlated" .
 
+tag:Count a brick:Tag ;
+    rdfs:label "Count" .
+
 tag:Cycle a brick:Tag ;
     rdfs:label "Cycle" .
 
@@ -43720,9 +44280,6 @@ tag:Delay a brick:Tag ;
 
 tag:Derivative a brick:Tag ;
     rdfs:label "Derivative" .
-
-tag:Detector a brick:Tag ;
-    rdfs:label "Detector" .
 
 tag:Direct a brick:Tag ;
     rdfs:label "Direct" .
@@ -43741,6 +44298,9 @@ tag:Elevator a brick:Tag ;
 
 tag:Entrance a brick:Tag ;
     rdfs:label "Entrance" .
+
+tag:Ethernet a brick:Tag ;
+    rdfs:label "Ethernet" .
 
 tag:Fluid a brick:Tag ;
     rdfs:label "Fluid" .
@@ -43762,9 +44322,6 @@ tag:Ground a brick:Tag ;
 
 tag:Handler a brick:Tag ;
     rdfs:label "Handler" .
-
-tag:Hardware a brick:Tag ;
-    rdfs:label "Hardware" .
 
 tag:Hood a brick:Tag ;
     rdfs:label "Hood" .
@@ -43823,6 +44380,9 @@ tag:PM10 a brick:Tag ;
 tag:PM2.5 a brick:Tag ;
     rdfs:label "PM2.5" .
 
+tag:Port a brick:Tag ;
+    rdfs:label "Port" .
+
 tag:Pre a brick:Tag ;
     rdfs:label "Pre" .
 
@@ -43838,6 +44398,9 @@ tag:Relay a brick:Tag ;
 tag:Rooftop a brick:Tag ;
     rdfs:label "Rooftop" .
 
+tag:Server a brick:Tag ;
+    rdfs:label "Server" .
+
 tag:Shower a brick:Tag ;
     rdfs:label "Shower" .
 
@@ -43846,9 +44409,6 @@ tag:Stage a brick:Tag ;
 
 tag:TVOC a brick:Tag ;
     rdfs:label "TVOC" .
-
-tag:Thermostat a brick:Tag ;
-    rdfs:label "Thermostat" .
 
 tag:Torque a brick:Tag ;
     rdfs:label "Torque" .
@@ -43870,6 +44430,10 @@ tag:Wheel a brick:Tag ;
 
 tag:Wind a brick:Tag ;
     rdfs:label "Wind" .
+
+rec:hasPart rdfs:subPropertyOf brick:hasPart .
+
+rec:isPartOf rdfs:subPropertyOf brick:isPartOf .
 
 brick:Air_Flow_Setpoint a owl:Class,
         sh:NodeShape ;
@@ -44684,6 +45248,13 @@ brick:feeds a owl:AsymmetricProperty,
     owl:inverseOf brick:isFedBy ;
     skos:definition "The subject is upstream of the object in the context of some sequential process; some media is passed between them"@en .
 
+brick:isPartOf a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Is part of" ;
+    rdfs:subPropertyOf brick:Relationship ;
+    owl:inverseOf brick:hasPart .
+
 brick:Building_Meter a owl:Class,
         sh:NodeShape ;
     rdfs:label "Building Meter" ;
@@ -44769,6 +45340,26 @@ brick:Cooling_Temperature_Setpoint a owl:Class,
         tag:Setpoint,
         tag:Temperature ;
     brick:hasQuantity brick:Temperature .
+
+brick:Data_Network_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Data Network Equipment" ;
+    rdfs:subClassOf brick:ICT_Equipment ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Data ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Network ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Data,
+        tag:Equipment,
+        tag:Network .
 
 brick:Differential_Setpoint a owl:Class ;
     rdfs:label "Differential Setpoint" ;
@@ -45181,6 +45772,24 @@ brick:Zone a owl:Class,
         tag:Zone ;
     brick:isReplacedBy rec:Zone .
 
+brick:hasLocation a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Has location" ;
+    rdfs:subPropertyOf brick:Relationship ;
+    owl:equivalentProperty rec:locatedIn ;
+    owl:inverseOf brick:isLocationOf ;
+    skos:definition "Subject is physically located in the location given by the object"@en .
+
+brick:hasPoint a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Has point" ;
+    rdfs:subPropertyOf brick:Relationship ;
+    owl:equivalentProperty rec:hasPoint ;
+    owl:inverseOf brick:isPointOf ;
+    skos:definition "The subject has a source of telemetry identified by the object. In some systems the source of telemetry may be represented as a digital/analog input/output point"@en .
+
 brick:timestamp a rdf:Property,
         owl:DatatypeProperty ;
     rdfs:label "Timestamp" ;
@@ -45195,48 +45804,51 @@ bsh:Electric_CurrentQuantityShape a owl:Class,
             sh:class bsh:TemperatureShape ;
             sh:path brick:ambientTemperatureOfMeasurement ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:A_Stat unit:NanoA unit:A_Ab unit:PicoA unit:KiloA unit:MicroA unit:A unit:PlanckCurrent unit:BIOT unit:MilliA unit:MegaA ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ],
+            sh:path brick:value ],
         [ a sh:PropertyShape ;
+            sh:in ( unit:MilliA unit:KiloA unit:PlanckCurrent unit:A_Stat unit:A unit:MegaA unit:NanoA unit:A_Ab unit:MicroA unit:PicoA unit:BIOT ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:value ] .
+            sh:path brick:hasUnit ] .
 
 bsh:LastKnownValueShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:datatype xsd:dateTime ;
             sh:minCount 1 ;
-            sh:path brick:timestamp ] .
+            sh:path brick:timestamp ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:value ] .
 
 bsh:VoltageQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            skos:definition "The ambient temperature at which the voltage was measured" ;
-            sh:class bsh:TemperatureShape ;
-            sh:path brick:ambientTemperatureOfMeasurement ],
+            sh:in ( unit:V_Stat unit:MegaV unit:KiloV unit:PlanckVolt unit:V unit:MilliV unit:MicroV unit:V_Ab ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
         [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:V_Stat unit:V_Ab unit:PlanckVolt unit:MicroV unit:KiloV unit:MilliV unit:MegaV unit:V ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            skos:definition "The ambient temperature at which the voltage was measured" ;
+            sh:class bsh:TemperatureShape ;
+            sh:path brick:ambientTemperatureOfMeasurement ] .
 
 tag:AHU a brick:Tag ;
     rdfs:label "AHU" .
+
+tag:Access a brick:Tag ;
+    rdfs:label "Access" .
 
 tag:Adjust a brick:Tag ;
     rdfs:label "Adjust" .
@@ -45265,6 +45877,12 @@ tag:Cold a brick:Tag ;
 tag:Conditioning a brick:Tag ;
     rdfs:label "Conditioning" .
 
+tag:Controller a brick:Tag ;
+    rdfs:label "Controller" .
+
+tag:Detector a brick:Tag ;
+    rdfs:label "Detector" .
+
 tag:Disconnect a brick:Tag ;
     rdfs:label "Disconnect" .
 
@@ -45292,6 +45910,9 @@ tag:Generator a brick:Tag ;
 tag:Grains a brick:Tag ;
     rdfs:label "Grains" .
 
+tag:Hardware a brick:Tag ;
+    rdfs:label "Hardware" .
+
 tag:Heater a brick:Tag ;
     rdfs:label "Heater" .
 
@@ -45306,9 +45927,6 @@ tag:Intercom a brick:Tag ;
 
 tag:Lead a brick:Tag ;
     rdfs:label "Lead" .
-
-tag:Leak a brick:Tag ;
-    rdfs:label "Leak" .
 
 tag:Lobby a brick:Tag ;
     rdfs:label "Lobby" .
@@ -45339,6 +45957,9 @@ tag:Sensitivity a brick:Tag ;
 
 tag:Surveillance a brick:Tag ;
     rdfs:label "Surveillance" .
+
+tag:Thermostat a brick:Tag ;
+    rdfs:label "Thermostat" .
 
 tag:Tolerance a brick:Tag ;
     rdfs:label "Tolerance" .
@@ -45784,6 +46405,22 @@ brick:Effective_Air_Temperature_Setpoint a owl:Class,
     brick:hasQuantity brick:Temperature ;
     brick:hasSubstance brick:Air .
 
+brick:ICT_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "ICT Equipment" ;
+    rdfs:subClassOf brick:Equipment ;
+    skos:definition "Information and Communications Technology (ICT) equipment operates with a processor to process data or logic and create digital signals."@en ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:ICT .
+
 brick:Leaving_Hot_Water a brick:Substance ;
     rdfs:label "Leaving Hot Water" ;
     skos:broader brick:Hot_Water,
@@ -45998,6 +46635,9 @@ tag:Interface a brick:Tag ;
 tag:Isolation a brick:Tag ;
     rdfs:label "Isolation" .
 
+tag:Leak a brick:Tag ;
+    rdfs:label "Leak" .
+
 tag:Loss a brick:Tag ;
     rdfs:label "Loss" .
 
@@ -46006,6 +46646,9 @@ tag:Luminance a brick:Tag ;
 
 tag:Manual a brick:Tag ;
     rdfs:label "Manual" .
+
+tag:Network a brick:Tag ;
+    rdfs:label "Network" .
 
 tag:Open a brick:Tag ;
     rdfs:label "Open" .
@@ -46226,6 +46869,27 @@ brick:Position a brick:Quantity ;
     skos:definition "The fraction of the full range of motion",
         "The fraction of the full range of motion"@en .
 
+brick:Sensor_Equipment a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Sensor Equipment" ;
+    rdfs:subClassOf brick:ICT_Equipment ;
+    skos:definition "A piece of equipment for sensing some physical properties"@en ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Equipment ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:ICT ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ],
+        [ a sh:TripleRule ;
+            sh:object tag:Sensor ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Equipment,
+        tag:ICT,
+        tag:Sensor .
+
 brick:Speed a brick:Quantity ;
     rdfs:label "Speed" ;
     qudt:applicableUnit unit:BFT,
@@ -46371,17 +47035,11 @@ tag:Floor a brick:Tag ;
 tag:Heating a brick:Tag ;
     rdfs:label "Heating" .
 
-tag:ICT a brick:Tag ;
-    rdfs:label "ICT" .
-
 tag:Laboratory a brick:Tag ;
     rdfs:label "Laboratory" .
 
 tag:Media a brick:Tag ;
     rdfs:label "Media" .
-
-tag:Occupancy a brick:Tag ;
-    rdfs:label "Occupancy" .
 
 tag:Outdoor a brick:Tag ;
     rdfs:label "Outdoor" .
@@ -46538,11 +47196,11 @@ tag:Lighting a brick:Tag ;
 tag:Lockout a brick:Tag ;
     rdfs:label "Lockout" .
 
-tag:Loop a brick:Tag ;
-    rdfs:label "Loop" .
-
 tag:Motor a brick:Tag ;
     rdfs:label "Motor" .
+
+tag:Occupancy a brick:Tag ;
+    rdfs:label "Occupancy" .
 
 tag:Plenum a brick:Tag ;
     rdfs:label "Plenum" .
@@ -46582,20 +47240,22 @@ brick:Collection a owl:Class,
         [ sh:message "Collection is an exclusive top class." ;
             sh:not [ sh:class brick:Location ] ],
         [ sh:message "Collection is an exclusive top class." ;
+            sh:not [ sh:class rec:Space ] ],
+        [ sh:message "Collection is an exclusive top class." ;
             sh:not [ sh:class brick:Substance ] ],
         [ sh:message "Collection is an exclusive top class." ;
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Collection is an exclusive top class." ;
             sh:not [ sh:class brick:Point ] ] ;
-    sh:property [ sh:message "A Collection can be associated with Equipments, Locations, Points, and other Collections." ;
-            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class brick:Point ] [ sh:class brick:Collection ] ) ;
-            sh:path brick:hasPart ],
-        [ a sh:PropertyShape ;
+    sh:property [ a sh:PropertyShape ;
             sh:minCount 1 ;
             sh:name "includes" ;
             sh:nodeKind sh:IRI ;
             sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Collection ] ) ;
             sh:path rec:includes ],
+        [ sh:message "A Collection can be associated with Equipments, Locations/Spaces, Points, and other Collections." ;
+            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class rec:Space ] [ sh:class brick:Point ] [ sh:class brick:Collection ] ) ;
+            sh:path brick:hasPart ],
         bsh:isMeteredByShape ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Collection ;
@@ -46720,6 +47380,9 @@ tag:Frequency a brick:Tag ;
 
 tag:Liquid a brick:Tag ;
     rdfs:label "Liquid" .
+
+tag:Loop a brick:Tag ;
+    rdfs:label "Loop" .
 
 tag:Natural a brick:Tag ;
     rdfs:label "Natural" .
@@ -46942,66 +47605,11 @@ brick:Discharge_Air a brick:Substance ;
     skos:broader brick:Air ;
     skos:definition "the air exiting the registers (vents)."@en .
 
-brick:Point a owl:Class,
-        sh:NodeShape ;
-    rdfs:label "Point" ;
-    rdfs:subClassOf brick:Class,
-        brick:Entity ;
-    sh:node [ sh:message "Point is an exclusive top class." ;
-            sh:not [ sh:class brick:Equipment ] ],
-        [ sh:message "Point is an exclusive top class." ;
-            sh:not [ sh:class brick:Location ] ],
-        [ sh:message "Point is an exclusive top class." ;
-            sh:not [ sh:class brick:Substance ] ],
-        [ sh:message "Point is an exclusive top class." ;
-            sh:not [ sh:class brick:Quantity ] ],
-        [ sh:message "Point is an exclusive top class." ;
-            sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ sh:maxCount 0 ;
-            sh:message "Points cannot have locations; use 'isPointOf' instead" ;
-            sh:path brick:hasLocation ],
-        [ a sh:PropertyShape ;
-            sh:class brick:Quantity ;
-            sh:name "has quantity" ;
-            sh:nodeKind sh:IRI ;
-            sh:path brick:hasQuantity ],
-        [ a sh:PropertyShape ;
-            sh:class brick:Substance ;
-            sh:name "has substance" ;
-            sh:nodeKind sh:IRI ;
-            sh:path brick:hasSubstance ],
-        [ a sh:PropertyShape ;
-            sh:name "is point of" ;
-            sh:nodeKind sh:IRI ;
-            sh:path rec:isPointOf ],
-        bsh:hasQuantityShape,
-        bsh:hasSubstanceShape,
-        bsh:hasUnitShape,
-        bsh:hasaggregateShape,
-        bsh:haselectricalComplexPowerShape,
-        bsh:haselectricalFlowShape,
-        bsh:haslastKnownValueShape,
-        bsh:isPointOfShape ;
-    sh:rule [ a sh:TripleRule ;
-            sh:object tag:Point ;
-            sh:predicate brick:hasTag ;
-            sh:subject sh:this ] ;
-    brick:hasAssociatedTag tag:Point .
-
 brick:Supply_Air a brick:Substance ;
     rdfs:label "Supply Air" ;
     owl:sameAs brick:Discharge_Air ;
     skos:broader brick:Air ;
     skos:definition "(1) air delivered by mechanical or natural ventilation to a space, composed of any combination of outdoor air, recirculated air, or transfer air. (2) air entering a space from an air-conditioning, heating, or ventilating apparatus for the purpose of comfort conditioning. Supply air is generally filtered, fan forced, and either heated, cooled, humidified, or dehumidified as necessary to maintain specified conditions. Only the quantity of outdoor air within the supply airflow may be used as replacement air."@en .
-
-brick:hasPart a owl:AsymmetricProperty,
-        owl:IrreflexiveProperty,
-        owl:ObjectProperty ;
-    rdfs:label "Has part" ;
-    rdfs:subPropertyOf brick:Relationship ;
-    owl:equivalentProperty rec:hasPart ;
-    owl:inverseOf brick:isPartOf ;
-    skos:definition "The subject is composed in part of the entity given by the object"@en .
 
 tag:Collection a brick:Tag ;
     rdfs:label "Collection" .
@@ -47083,17 +47691,71 @@ brick:Pressure a brick:Quantity ;
         brick:Velocity_Pressure ;
     brick:hasQUDTReference qudtqk:Pressure .
 
+brick:hasPart a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Has part" ;
+    rdfs:subPropertyOf brick:Relationship ;
+    owl:inverseOf brick:isPartOf ;
+    skos:definition "The subject is composed in part of the entity given by the object"@en .
+
 tag:CO2 a brick:Tag ;
     rdfs:label "CO2" .
 
-tag:Security a brick:Tag ;
-    rdfs:label "Security" .
+brick:Point a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Point" ;
+    rdfs:subClassOf brick:Class,
+        brick:Entity ;
+    sh:node [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class brick:Equipment ] ],
+        [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class brick:Location ] ],
+        [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class rec:Space ] ],
+        [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class brick:Substance ] ],
+        [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class brick:Quantity ] ],
+        [ sh:message "Point is an exclusive top class." ;
+            sh:not [ sh:class brick:Collection ] ] ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class brick:Quantity ;
+            sh:name "has quantity" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:hasQuantity ],
+        [ a sh:PropertyShape ;
+            sh:class brick:Substance ;
+            sh:name "has substance" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:hasSubstance ],
+        [ a sh:PropertyShape ;
+            sh:name "is point of" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:isPointOf ],
+        [ sh:maxCount 0 ;
+            sh:message "Points cannot have locations; use 'isPointOf' instead" ;
+            sh:path brick:hasLocation ],
+        bsh:hasQuantityShape,
+        bsh:hasSubstanceShape,
+        bsh:hasUnitShape,
+        bsh:hasaggregateShape,
+        bsh:haselectricalComplexPowerShape,
+        bsh:haselectricalFlowShape,
+        bsh:haslastKnownValueShape,
+        bsh:isPointOfShape ;
+    sh:rule [ a sh:TripleRule ;
+            sh:object tag:Point ;
+            sh:predicate brick:hasTag ;
+            sh:subject sh:this ] ;
+    brick:hasAssociatedTag tag:Point .
 
 brick:Location a owl:Class,
         sh:NodeShape ;
     rdfs:label "Location" ;
     rdfs:subClassOf brick:Class,
-        brick:Entity ;
+        brick:Entity,
+        rec:Space ;
     owl:deprecated true ;
     sh:node [ sh:message "Location is an exclusive top class." ;
             sh:not [ sh:class brick:Point ] ],
@@ -47105,11 +47767,19 @@ brick:Location a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Location is an exclusive top class." ;
             sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ sh:class brick:Location ;
-            sh:message "A Location's parts should be always Locations." ;
+    sh:property [ sh:or ( [ sh:class brick:Point ] ) ;
+            sh:path brick:hasPoint ],
+        [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
             sh:path brick:hasPart ],
-        [ sh:class brick:Location ;
-            sh:message "A Location's parts should be always Locations." ;
+        [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:hasPart ],
+        [ sh:or ( [ sh:class brick:Point ] ) ;
+            sh:path brick:hasPoint ],
+        [ sh:message "A Location's parts should be always be Locations/Spaces." ;
+            sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:hasPart ],
+        [ sh:message "A Location's parts should be always be Locations/Spaces." ;
+            sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
             sh:path brick:isPartOf ],
         [ sh:class brick:Equipment ;
             sh:message "Locations can be fed only by other Equipment." ;
@@ -47138,11 +47808,11 @@ tag:Coil a brick:Tag ;
 tag:Demand a brick:Tag ;
     rdfs:label "Demand" .
 
+tag:Security a brick:Tag ;
+    rdfs:label "Security" .
+
 tag:Service a brick:Tag ;
     rdfs:label "Service" .
-
-tag:Switch a brick:Tag ;
-    rdfs:label "Switch" .
 
 brick:Setpoint a owl:Class,
         sh:NodeShape ;
@@ -47213,6 +47883,9 @@ tag:Filter a brick:Tag ;
 tag:Position a brick:Tag ;
     rdfs:label "Position" .
 
+tag:Switch a brick:Tag ;
+    rdfs:label "Switch" .
+
 tag:Thermal a brick:Tag ;
     rdfs:label "Thermal" .
 
@@ -47242,49 +47915,6 @@ tag:Meter a brick:Tag ;
 tag:Tank a brick:Tag ;
     rdfs:label "Tank" .
 
-<https://brickschema.org/schema/1.4-rc1/Brick> a owl:Ontology ;
-    rdfs:label "Brick" ;
-    dcterms:creator ( [ a sdo:Person ;
-                sdo:email "gtfierro@mines.edu" ;
-                sdo:name "Gabe Fierro" ] [ a sdo:Person ;
-                sdo:email "jbkoh@eng.ucsd.edu" ;
-                sdo:name "Jason Koh" ] ) ;
-    dcterms:issued "2016-11-16" ;
-    dcterms:license <https://github.com/BrickSchema/brick/blob/master/LICENSE> ;
-    dcterms:modified "2024-01-29" ;
-    dcterms:publisher [ a sdo:Consortium ;
-            sdo:legalName "Brick Consortium, Inc" ;
-            sdo:sameAs <https://brickschema.org/consortium/> ] ;
-    rdfs:isDefinedBy <https://brickschema.org/schema/1.4-rc1/Brick> ;
-    rdfs:seeAlso <https://brickschema.org> ;
-    owl:imports <http://data.ashrae.org/bacnet/2020>,
-        <http://qudt.org/2.1/schema/shacl/overlay/qudt>,
-        <http://qudt.org/2.1/schema/shacl/qudt>,
-        <http://qudt.org/2.1/vocab/dimensionvector>,
-        <http://qudt.org/2.1/vocab/prefix>,
-        <http://qudt.org/2.1/vocab/quantitykind>,
-        <http://qudt.org/2.1/vocab/sou>,
-        <http://qudt.org/2.1/vocab/unit>,
-        <https://brickschema.org/schema/Brick/ref>,
-        <https://w3id.org/rec/recimports> ;
-    owl:versionInfo "1.4-rc1.0-rc1" ;
-    sh:declare [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
-            sh:prefix "owl" ],
-        [ sh:namespace "https://w3id.org/rec#"^^xsd:anyURI ;
-            sh:prefix "rec" ],
-        [ sh:namespace "http://data.ashrae.org/standard223#"^^xsd:anyURI ;
-            sh:prefix "s223" ],
-        [ sh:namespace "https://brickschema.org/schema/Brick#"^^xsd:anyURI ;
-            sh:prefix "brick" ],
-        [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
-            sh:prefix "sh" ],
-        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
-            sh:prefix "ref" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ] .
-
 brick:Relationship a owl:ObjectProperty ;
     rdfs:label "Relationship" ;
     skos:definition "Super-property of all Brick relationships between entities (Equipment, Location, Point)" .
@@ -47310,8 +47940,54 @@ tag:Power a brick:Tag ;
 tag:Speed a brick:Tag ;
     rdfs:label "Speed" .
 
+<https://brickschema.org/schema/1.4/Brick> a owl:Ontology ;
+    rdfs:label "Brick" ;
+    dcterms:creator ( [ a sdo:Person ;
+                sdo:email "gtfierro@mines.edu" ;
+                sdo:name "Gabe Fierro" ] [ a sdo:Person ;
+                sdo:email "jbkoh@eng.ucsd.edu" ;
+                sdo:name "Jason Koh" ] ) ;
+    dcterms:issued "2016-11-16" ;
+    dcterms:license <https://github.com/BrickSchema/brick/blob/master/LICENSE> ;
+    dcterms:modified "2024-03-18" ;
+    dcterms:publisher [ a sdo:Consortium ;
+            sdo:legalName "Brick Consortium, Inc" ;
+            sdo:sameAs <https://brickschema.org/consortium/> ] ;
+    rdfs:isDefinedBy <https://brickschema.org/schema/1.4/Brick> ;
+    rdfs:seeAlso <https://brickschema.org> ;
+    owl:imports <http://data.ashrae.org/bacnet/2020>,
+        <http://qudt.org/2.1/schema/shacl/overlay/qudt>,
+        <http://qudt.org/2.1/schema/shacl/qudt>,
+        <http://qudt.org/2.1/vocab/dimensionvector>,
+        <http://qudt.org/2.1/vocab/prefix>,
+        <http://qudt.org/2.1/vocab/quantitykind>,
+        <http://qudt.org/2.1/vocab/sou>,
+        <http://qudt.org/2.1/vocab/unit>,
+        <https://brickschema.org/schema/Brick/ref>,
+        <https://w3id.org/rec/recimports> ;
+    owl:versionInfo "1.4.0" ;
+    sh:declare [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+            sh:prefix "sh" ],
+        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
+            sh:prefix "ref" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+            sh:prefix "owl" ],
+        [ sh:namespace "https://w3id.org/rec#"^^xsd:anyURI ;
+            sh:prefix "rec" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "https://brickschema.org/schema/Brick#"^^xsd:anyURI ;
+            sh:prefix "brick" ],
+        [ sh:namespace "http://data.ashrae.org/standard223#"^^xsd:anyURI ;
+            sh:prefix "s223" ] .
+
 tag:Band a brick:Tag ;
     rdfs:label "Band" .
+
+tag:ICT a brick:Tag ;
+    rdfs:label "ICT" .
 
 brick:Differential_Pressure a brick:Quantity ;
     rdfs:label "Differential Pressure" ;
@@ -47359,7 +48035,7 @@ brick:HVAC_Equipment a owl:Class,
     skos:definition "See Heating_Ventilation_Air_Conditioning_System"@en ;
     sh:property [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] ) ;
             sh:path brick:hasPart ],
-        [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] [ sh:class brick:Location ] ) ;
+        [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] [ sh:class rec:Space ] ) ;
             sh:path brick:feeds ] ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Equipment ;
@@ -47428,18 +48104,14 @@ brick:Equipment a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Equipment is an exclusive top class." ;
             sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ sh:class brick:Equipment ;
-            sh:message "A piece of Equipment's parts should be always other Equipment." ;
-            sh:path brick:hasPart ],
-        [ sh:message "Equipment can be part of a Collection, System or other Equipment." ;
-            sh:or ( [ sh:class brick:System ] [ sh:class brick:Equipment ] [ sh:class brick:Collection ] ) ;
-            sh:path brick:isPartOf ],
-        [ sh:class brick:Location ;
-            sh:message "A piece of Equipment can be located only at a Location" ;
+    sh:property [ sh:or ( [ sh:class brick:Point ] ) ;
+            sh:path brick:hasPoint ],
+        [ sh:or ( [ sh:class rec:Space ] ) ;
             sh:path brick:hasLocation ],
-        [ sh:message "A piece of Equipment can feed a Equipment or Location." ;
-            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] ) ;
-            sh:path brick:feeds ],
+        [ sh:or ( [ sh:class brick:Point ] ) ;
+            sh:path brick:hasPoint ],
+        [ sh:or ( [ sh:class rec:Space ] ) ;
+            sh:path brick:hasLocation ],
         [ a sh:PropertyShape ;
             sh:name "feeds" ;
             sh:nodeKind sh:IRI ;
@@ -47448,6 +48120,18 @@ brick:Equipment a owl:Class,
             sh:name "is fed by" ;
             sh:nodeKind sh:IRI ;
             sh:path rec:isFedBy ],
+        [ sh:class brick:Equipment ;
+            sh:message "A piece of Equipment's parts should be always other Equipment." ;
+            sh:path brick:hasPart ],
+        [ sh:message "Equipment can be part of a Collection, System or other Equipment." ;
+            sh:or ( [ sh:class brick:System ] [ sh:class brick:Equipment ] [ sh:class brick:Collection ] ) ;
+            sh:path brick:isPartOf ],
+        [ sh:message "A piece of Equipment can be located only at a Location/Space" ;
+            sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:hasLocation ],
+        [ sh:message "A piece of Equipment can feed a Equipment or Location/Space." ;
+            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:feeds ],
         bsh:hasInputSubstanceShape,
         bsh:hasOutputSubstanceShape,
         bsh:hasPointShape,
@@ -47599,15 +48283,15 @@ brick:Sensor a owl:Class,
     brick:hasAssociatedTag tag:Point,
         tag:Sensor .
 
-tag:Condenser a brick:Tag ;
-    rdfs:label "Condenser" .
-
 tag:Return a brick:Tag ;
     rdfs:label "Return" .
 
 brick:lastKnownValue a brick:EntityProperty ;
     rdfs:label "Last known value" ;
     skos:definition "The last known value of the Point entity" .
+
+tag:Condenser a brick:Tag ;
+    rdfs:label "Condenser" .
 
 tag:Humidity a brick:Tag ;
     rdfs:label "Humidity" .
@@ -47744,20 +48428,20 @@ tag:Parameter a brick:Tag ;
 tag:Pressure a brick:Tag ;
     rdfs:label "Pressure" .
 
-tag:Water a brick:Tag ;
-    rdfs:label "Water" .
-
 tag:Temperature a brick:Tag ;
     rdfs:label "Temperature" .
 
-tag:Sensor a brick:Tag ;
-    rdfs:label "Sensor" .
+tag:Water a brick:Tag ;
+    rdfs:label "Water" .
 
 tag:Air a brick:Tag ;
     rdfs:label "Air" .
 
 tag:Setpoint a brick:Tag ;
     rdfs:label "Setpoint" .
+
+tag:Sensor a brick:Tag ;
+    rdfs:label "Sensor" .
 
 brick:Tag a owl:Class ;
     sh:property bsh:isAssociatedWithShape,
