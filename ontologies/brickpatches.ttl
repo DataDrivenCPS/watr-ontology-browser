@@ -1,0 +1,1195 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix bsh: <https://brickschema.org/schema/BrickShape#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://w3id.org/rec#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+brick:Ablutions_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. There is not yet a replacement in REC for Ablutions_Room" .
+
+brick:Absolute_Humidity_Sensor a owl:Class,
+        sh:NodeShape ;
+    rdfs:label "Absolute Humidity Sensor" ;
+    rdfs:subClassOf brick:Humidity_Sensor ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class rec:AbsoluteHumidityObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Adjust_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Air_Grains_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Air_Quality_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Alarm sh:property [ a sh:PropertyShape ;
+            sh:class rec:ExceptionEvent ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Angle_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:AngleObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Atrium owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Atrium" ;
+    brick:isReplacedBy rec:Atrium .
+
+brick:Auditorium owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Auditorium" ;
+    brick:isReplacedBy rec:Auditorium .
+
+brick:Basement owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:BasementLevel" ;
+    brick:isReplacedBy rec:BasementLevel .
+
+brick:Battery_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElectricityRoom" ;
+    brick:isReplacedBy rec:ElectricityRoom .
+
+brick:Bench_Space owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider creating a rec:Zone that is part of a rec:Stadium" ;
+    brick:isReplacedBy rec:Zone .
+
+brick:Break_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:StaffRoom" ;
+    brick:isReplacedBy rec:StaffRoom .
+
+brick:Breakroom owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:StaffRoom" ;
+    brick:isReplacedBy rec:StaffRoom .
+
+brick:Broadcast_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:RecordingRoom" ;
+    brick:isReplacedBy rec:RecordingRoom .
+
+brick:Building owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Building" ;
+    brick:isReplacedBy rec:Building .
+
+brick:Cafeteria owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CafeteriaRoom" ;
+    brick:isReplacedBy rec:CafeteriaRoom .
+
+brick:Capacity_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Cold_Box owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Laboratory" ;
+    brick:isReplacedBy rec:Laboratory .
+
+brick:Command sh:property [ a sh:PropertyShape ;
+            sh:class rec:ActuationEvent ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Common_Space owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Space" ;
+    brick:isReplacedBy rec:Space .
+
+brick:Concession owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:FoodHandlingRoom" ;
+    brick:isReplacedBy rec:FoodHandlingRoom .
+
+brick:Conductivity_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Conference_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ConferenceRoom" ;
+    brick:isReplacedBy rec:ConferenceRoom .
+
+brick:Contact_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:BooleanValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Control_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:SecurityRoom" ;
+    brick:isReplacedBy rec:SecurityRoom .
+
+brick:Copy_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CopyingRoom" ;
+    brick:isReplacedBy rec:CopyingRoom .
+
+brick:Cubicle owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Workspace perhaps with a rec:Desk" ;
+    brick:isReplacedBy rec:Workspace .
+
+brick:Current_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:ElectricCurrentObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Demand_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:PowerObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Detention_Room owl:deprecated true .
+
+brick:Dewpoint_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:TemperatureObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Differential_Temperature_Setpoint a sh:NodeShape .
+
+brick:Direction_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:AngleObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Distribution_Frame owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
+    brick:isReplacedBy rec:CableRoom .
+
+brick:Duration_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:TimeSpanObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Electrical_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElectricityRoom" ;
+    brick:isReplacedBy rec:ElectricityRoom .
+
+brick:Elevator_Shaft owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElevatorShaft" ;
+    brick:isReplacedBy rec:ElevatorShaft .
+
+brick:Elevator_Space owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElevatorShaft" ;
+    brick:isReplacedBy rec:ElevatorShaft .
+
+brick:Employee_Entrance_Lobby owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ServiceEntrance" ;
+    brick:isReplacedBy rec:ServiceEntrance .
+
+brick:Enclosed_Office owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Worksapce" ;
+    brick:isReplacedBy rec:Workspace .
+
+brick:Energy_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:EnergyObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Energy_Zone owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Zone" ;
+    brick:isReplacedBy rec:Zone .
+
+brick:Enthalpy_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Entrance owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Entrance" ;
+    brick:isReplacedBy rec:Entrance .
+
+brick:Environment_Box owl:deprecated true .
+
+brick:Equipment_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:UtilitiesRoom" ;
+    brick:isReplacedBy rec:UtilitiesRoom .
+
+brick:Exercise_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ExerciseRoom" ;
+    brick:isReplacedBy rec:ExerciseRoom .
+
+brick:Field_Of_Play owl:deprecated true .
+
+brick:Fire_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:BooleanValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Fire_Zone owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ServiceEntrance" ;
+    brick:isReplacedBy rec:ServiceEntrance .
+
+brick:First_Aid_Room owl:deprecated true .
+
+brick:Floor owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Level" ;
+    brick:isReplacedBy rec:Level .
+
+brick:Flow_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:VolumeFlowRateObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Food_Service_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:FoodHandlingRoom" ;
+    brick:isReplacedBy rec:FoodHandlingRoom .
+
+brick:Freezer owl:deprecated true .
+
+brick:Frequency_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:FrequencyObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Frost_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:BooleanValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Furniture owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Furniture" ;
+    brick:isReplacedBy rec:Furniture .
+
+brick:Gas_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Gatehouse owl:deprecated true .
+
+brick:Generation_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Generator_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ElectricityRoom" ;
+    brick:isReplacedBy rec:ElectricityRoom .
+
+brick:HVAC_Zone owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:HVACZone" ;
+    brick:isReplacedBy rec:HVACZone .
+
+brick:Hail_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Hallway owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Hallway" ;
+    brick:isReplacedBy rec:Hallway .
+
+brick:Hazardous_Materials_Storage owl:deprecated true .
+
+brick:Heat_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Hospitality_Box owl:deprecated true .
+
+brick:Hot_Box owl:deprecated true .
+
+brick:IDF owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
+    brick:isReplacedBy rec:CableRoom .
+
+brick:Illuminance_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:IlluminanceObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Imbalance_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Information_Area owl:deprecated true .
+
+brick:Janitor_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:BackOffice" ;
+    brick:isReplacedBy rec:BackOffice .
+
+brick:Laboratory owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Laboratory" ;
+    brick:isReplacedBy rec:Laboratory .
+
+brick:Library owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Library" ;
+    brick:isReplacedBy rec:Library .
+
+brick:Lighting a sh:NodeShape .
+
+brick:Lighting_Zone owl:deprecated true .
+
+brick:Loading_Dock owl:deprecated true .
+
+brick:Lobby owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Lobby" ;
+    brick:isReplacedBy rec:Lobby .
+
+brick:Location owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Architecture" ;
+    brick:isReplacedBy rec:Architecture .
+
+brick:Loop rdfs:subClassOf rec:Collection ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class brick:Equipment ;
+            sh:minCount 1 ;
+            sh:name "includes" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:includes ] .
+
+brick:Lounge owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Lounge" ;
+    brick:isReplacedBy rec:Lounge .
+
+brick:Luminance_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:LuminanceObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:MDF owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CableRoom" ;
+    brick:isReplacedBy rec:CableRoom .
+
+brick:Mail_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:MailRoom" ;
+    brick:isReplacedBy rec:MailRoom .
+
+brick:Majlis owl:deprecated true .
+
+brick:Massage_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:TherapyRoom" ;
+    brick:isReplacedBy rec:TherapyRoom .
+
+brick:Mechanical_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:UtilitiesRoom" ;
+    brick:isReplacedBy rec:UtilitiesRoom .
+
+brick:Media_Hot_Desk owl:deprecated true .
+
+brick:Media_Production_Room owl:deprecated true .
+
+brick:Media_Room owl:deprecated true .
+
+brick:Medical_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:HealthcareRoom" ;
+    brick:isReplacedBy rec:HealthcareRoom .
+
+brick:Motion_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:BooleanValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Occupancy_Count_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:IntegerValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Occupancy_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:BooleanValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Office owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Office" ;
+    brick:isReplacedBy rec:Office .
+
+brick:Office_Kitchen owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Kitchenette" ;
+    brick:isReplacedBy rec:Kitchenette .
+
+brick:Open_Office owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:OfficeLandscape" ;
+    brick:isReplacedBy rec:OfficeLandscape .
+
+brick:Outdoor_Area owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:OutdoorSpace" ;
+    brick:isReplacedBy rec:OutdoorSpace .
+
+brick:Outside owl:deprecated true .
+
+brick:PV_Array rdfs:subClassOf rec:Collection ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class brick:PV_Panel ;
+            sh:minCount 1 ;
+            sh:name "includes" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:includes ] .
+
+brick:Parameter sh:property [ a sh:PropertyShape ;
+            sh:class bsh:LastKnownDoubleShape ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Parking_Level owl:deprecated true .
+
+brick:Parking_Space owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ParkingSpace" ;
+    brick:isReplacedBy rec:ParkingSpace .
+
+brick:Parking_Structure owl:deprecated true .
+
+brick:Photovoltaic_Array owl:deprecated true .
+
+brick:Piezoelectric_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Plumbing_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:UtilitiesRoom" ;
+    brick:isReplacedBy rec:UtilitiesRoom .
+
+brick:Point sh:property [ a sh:PropertyShape ;
+            sh:class brick:Quantity ;
+            sh:name "has quantity" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:hasQuantity ],
+        [ a sh:PropertyShape ;
+            sh:class brick:Substance ;
+            sh:name "has substance" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:hasSubstance ],
+        [ a sh:PropertyShape ;
+            sh:name "is point of" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:isPointOf ] .
+
+brick:Portfolio owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Portfolio" ;
+    brick:isReplacedBy rec:Portfolio .
+
+brick:Position_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Power_Factor_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Power_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:PowerObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Prayer_Room owl:deprecated true .
+
+brick:Pressure_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Private_Office owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Office" ;
+    brick:isReplacedBy rec:Office .
+
+brick:Pump_Room owl:deprecated true .
+
+brick:Rain_Level_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:LengthObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Rain_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class bsh:LastKnownDoubleShape ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Reception owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Reception" ;
+    brick:isReplacedBy rec:Reception .
+
+brick:Refrigerant_Level_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Region owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Region" ;
+    brick:isReplacedBy rec:Region .
+
+brick:Relative_Humidity_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:RelativeHumidityObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Rest_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:RestingRoom" ;
+    brick:isReplacedBy rec:RestingRoom .
+
+brick:Restroom owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Bathroom" ;
+    brick:isReplacedBy rec:Bathroom .
+
+brick:Retail_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:RetailRoom" ;
+    brick:isReplacedBy rec:RetailRoom .
+
+brick:Riser owl:deprecated true .
+
+brick:Rooftop owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:RoofLevel" ;
+    brick:isReplacedBy rec:RoofLevel .
+
+brick:Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Room" ;
+    brick:isReplacedBy rec:Room .
+
+brick:Security_Service_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:SecurityRoom" ;
+    brick:isReplacedBy rec:SecurityRoom .
+
+brick:Server_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:DataServerRoom" ;
+    brick:isReplacedBy rec:DataServerRoom .
+
+brick:Service_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:UtilitiesRoom" ;
+    brick:isReplacedBy rec:UtilitiesRoom .
+
+brick:Setpoint sh:property [ a sh:PropertyShape ;
+            sh:class bsh:LastKnownDoubleShape ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Shared_Office owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:OfficeLandscape" ;
+    brick:isReplacedBy rec:OfficeLandscape .
+
+brick:Shower owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:ShowerRoom" ;
+    brick:isReplacedBy rec:ShowerRoom .
+
+brick:Site owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Site" ;
+    brick:isReplacedBy rec:Site .
+
+brick:Solar_Radiance_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Space owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Space" ;
+    brick:isReplacedBy rec:Space .
+
+brick:Speed_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:VelocityObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Sports_Service_Room owl:deprecated true .
+
+brick:Stage_Riser owl:deprecated true .
+
+brick:Staircase owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Stairwell" ;
+    brick:isReplacedBy rec:Stairwell .
+
+brick:Status sh:property [ a sh:PropertyShape ;
+            sh:class bsh:LastKnownValueShape ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Storage_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Storage" ;
+    brick:isReplacedBy rec:Storage .
+
+brick:Storey owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Level" ;
+    brick:isReplacedBy rec:Level .
+
+brick:Studio owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:RecordingRoom" ;
+    brick:isReplacedBy rec:RecordingRoom .
+
+brick:Switch_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:DataServerRoom" ;
+    brick:isReplacedBy rec:DataServerRoom .
+
+brick:TETRA_Room owl:deprecated true .
+
+brick:Team_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:TeamRoom" ;
+    brick:isReplacedBy rec:TeamRoom .
+
+brick:Telecom_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:DataServerRoom" ;
+    brick:isReplacedBy rec:DataServerRoom .
+
+brick:Temperature_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:TemperatureObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Ticketing_Booth owl:deprecated true .
+
+brick:Torque_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:TorqueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Transformer_Room owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:UtilitiesRoom" ;
+    brick:isReplacedBy rec:UtilitiesRoom .
+
+brick:Tunnel owl:deprecated true .
+
+brick:Usage_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:DoubleValueObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Vertical_Space owl:deprecated true .
+
+brick:Visitor_Lobby owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Lobby" ;
+    brick:isReplacedBy rec:Lobby .
+
+brick:Voltage_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:VoltageObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Wardrobe owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:CloakRoom" ;
+    brick:isReplacedBy rec:CloakRoom .
+
+brick:Waste_Storage owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:WasteManagementRoom" ;
+    brick:isReplacedBy rec:WasteManagementRoom .
+
+brick:Water_Level_Sensor sh:property [ a sh:PropertyShape ;
+            sh:class rec:LengthObservation ;
+            sh:maxCount 1 ;
+            sh:name "last known value" ;
+            sh:nodeKind sh:IRI ;
+            sh:path brick:lastKnownValue ] .
+
+brick:Water_Tank owl:deprecated true .
+
+brick:Wing owl:deprecated true .
+
+brick:Workshop owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Workshop" ;
+    brick:isReplacedBy rec:Workshop .
+
+brick:Zone owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "Brick location classes are being phased out in favor of RealEstateCore classes. For a replacement, consider rec:Zone" ;
+    brick:isReplacedBy rec:Zone .
+
+brick:feeds owl:equivalentProperty rec:feeds .
+
+brick:hasLocation owl:equivalentProperty rec:locatedIn .
+
+brick:hasPoint owl:equivalentProperty rec:hasPoint .
+
+brick:isFedBy owl:equivalentProperty rec:isFedBy .
+
+brick:isLocationOf owl:equivalentProperty rec:isLocationOf .
+
+brick:isPointOf owl:equivalentProperty rec:isPointOf .
+
+bsh:InferRecValue a sh:NodeShape ;
+    sh:rule [ a sh:SPARQLRule ;
+            sh:construct """
+            CONSTRUCT {
+$this rec:value ?v
+}
+WHERE {
+$this brick:value ?v
+}
+			""" ;
+            sh:prefixes <https://brickschema.org/schema/1.4/Brick> ] ;
+    sh:targetSubjectsOf brick:value .
+
+bsh:LastKnownBooleanShape a owl:Class,
+        sh:NodeShape ;
+    rdfs:subClassOf bsh:LastKnownValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "timestamp" ;
+            sh:path brick:timestamp ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "value" ;
+            sh:path brick:value ] .
+
+bsh:LastKnownDurationShape a owl:Class,
+        sh:NodeShape ;
+    rdfs:subClassOf bsh:LastKnownValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "timestamp" ;
+            sh:path brick:timestamp ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:duration ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "value" ;
+            sh:path brick:value ] .
+
+bsh:LastKnownIntegerShape a owl:Class,
+        sh:NodeShape ;
+    rdfs:subClassOf bsh:LastKnownValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "timestamp" ;
+            sh:path brick:timestamp ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "value" ;
+            sh:path brick:value ] .
+
+bsh:ValueShape a sh:NodeShape .
+
+rec:AccelerationObservation a <dtmi:dtdl:class:Component> .
+
+rec:AngularAccelerationObservation a <dtmi:dtdl:class:Component> .
+
+rec:AngularVelocityObservation a <dtmi:dtdl:class:Component> .
+
+rec:AreaObservation a <dtmi:dtdl:class:Component> .
+
+rec:AssetCollection a sh:NodeShape .
+
+rec:BACnetController owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:BACnetController" ;
+    brick:isReplacedBy brick:BACnet_Controller .
+
+rec:CapacitanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:Controller owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:Controller" ;
+    brick:isReplacedBy brick:Controller .
+
+rec:DataNetworkEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:DataNetworkEquipment" ;
+    brick:isReplacedBy brick:Data_Network_Equipment .
+
+rec:DataRateObservation a <dtmi:dtdl:class:Component> .
+
+rec:DataSizeObservation a <dtmi:dtdl:class:Component> .
+
+rec:DaylightSensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:DaylightSensorEquipment" ;
+    brick:isReplacedBy brick:Daylight_Sensor_Equipment .
+
+rec:DensityObservation a <dtmi:dtdl:class:Component> .
+
+rec:DistanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:ElectricChargeObservation a <dtmi:dtdl:class:Component> .
+
+rec:EquipmentCollection a sh:NodeShape .
+
+rec:EthernetPort owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:EthernetPort" ;
+    brick:isReplacedBy brick:Ethernet_Port .
+
+rec:EthernetSwitch owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:EthernetSwitch" ;
+    brick:isReplacedBy brick:Ethernet_Switch .
+
+rec:ForceObservation a <dtmi:dtdl:class:Component> .
+
+rec:IAQSensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:IAQSensorEquipment" ;
+    brick:isReplacedBy brick:IAQ_Sensor_Equipment .
+
+rec:ICTRack owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Rack" ;
+    brick:isReplacedBy brick:ICT_Rack .
+
+rec:ICT_Equipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Equipment" ;
+    brick:isReplacedBy brick:ICT_Equipment .
+
+rec:ICT_Hardware owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ICT_Hardware" ;
+    brick:isReplacedBy brick:ICT_Hardware .
+
+rec:InductanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:LeakDetectorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:LeakDetectorEquipment" ;
+    brick:isReplacedBy brick:Leak_Detector_Equipment .
+
+rec:LuminousFluxObservation a <dtmi:dtdl:class:Component> .
+
+rec:LuminousIntensityObservation a <dtmi:dtdl:class:Component> .
+
+rec:MagneticFluxObservation a <dtmi:dtdl:class:Component> .
+
+rec:MassFlowRateObservation a <dtmi:dtdl:class:Component> .
+
+rec:MassObservation a <dtmi:dtdl:class:Component> .
+
+rec:ModbusController owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ModbusController" ;
+    brick:isReplacedBy brick:Modbus_Controller .
+
+rec:NetworkSecurityEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:NetworkSecurityEquipment" ;
+    brick:isReplacedBy brick:Network_Security_Equipment .
+
+rec:Network_Router owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:NetworkRouter" ;
+    brick:isReplacedBy brick:Network_Router .
+
+rec:OccupancySensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:OccupancySensorEquipment" ;
+    brick:isReplacedBy brick:Occupancy_Sensor_Equipment .
+
+rec:PeopleCountSensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:PeopleCountSensorEquipment" ;
+    brick:isReplacedBy brick:People_Count_Sensor_Equipment .
+
+rec:PressureObservation a <dtmi:dtdl:class:Component> .
+
+rec:ResistanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:SensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:SensorEquipment" ;
+    brick:isReplacedBy brick:Sensor_Equipment .
+
+rec:Server owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:Server" ;
+    brick:isReplacedBy brick:Server .
+
+rec:SoundPressureObservation a <dtmi:dtdl:class:Component> .
+
+rec:ThermostatEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:ThermostatEquipment" ;
+    brick:isReplacedBy brick:Thermostat .
+
+rec:ThrustObservation a <dtmi:dtdl:class:Component> .
+
+rec:VibrationSensorEquipment owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:VibrationSensorEquipment" ;
+    brick:isReplacedBy brick:Vibration_Sensor_Equipment .
+
+rec:VolumeObservation a <dtmi:dtdl:class:Component> .
+
+rec:WirelessAccessPoint owl:deprecated true ;
+    brick:deprecatedInVersion "1.4.0" ;
+    brick:deprecationMitigationMessage "REC ICT classes are being phased out in favor of Brick classes. For a replacement, consider brick:WirelessAccessPoint" ;
+    brick:isReplacedBy brick:Wireless_Access_Point .
+
+rec:hasPart rdfs:subPropertyOf brick:hasPart .
+
+rec:isPartOf rdfs:subPropertyOf brick:isPartOf .
+
+rec:substance a owl:AnnotationProperty ;
+    rdfs:label "substance" ;
+    rdfs:domain rec:feeds,
+        rec:isFedBy ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:oneOf ( "ACElec" "Air" "BlowdownWater" "ChilledWater" "ColdDomesticWater" "Condensate" "CondenserWater" "DCElec" "Diesel" "DriveElec" "Ethernet" "ExhaustAir" "Freight" "FuelOil" "Gasoline" "GreaseExhaustAir" "HotDomesticWater" "HotWater" "IrrigationWater" "Light" "MakeupWater" "NaturalGas" "NonPotableDomesticWater" "OutsideAir" "People" "Propane" "RecircHotDomesticWater" "Refrig" "ReturnAir" "SprinklerWater" "Steam" "StormDrainage" "SupplyAir" "TransferAir" "WasteVentDrainage" "Water" ) ] .
+
+<https://w3id.org/rec/brickpatches> a owl:Ontology ;
+    owl:imports <https://brickschema.org/schema/1.4/Brick>,
+        <https://w3id.org/rec> ;
+    owl:versionInfo "Created with TopBraid Composer" .
+
+brick:Collection rdfs:subClassOf rec:Collection ;
+    sh:property [ a sh:PropertyShape ;
+            sh:minCount 1 ;
+            sh:name "includes" ;
+            sh:nodeKind sh:IRI ;
+            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Collection ] ) ;
+            sh:path rec:includes ] .
+
+rec:AbsoluteHumidityObservation a <dtmi:dtdl:class:Component> .
+
+rec:ActuationEvent a <dtmi:dtdl:class:Component> .
+
+rec:Asset a sh:NodeShape .
+
+rec:ElectricCurrentObservation a <dtmi:dtdl:class:Component> .
+
+rec:EnergyObservation a <dtmi:dtdl:class:Component> .
+
+rec:ExceptionEvent a <dtmi:dtdl:class:Component> .
+
+rec:FrequencyObservation a <dtmi:dtdl:class:Component> .
+
+rec:IlluminanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:IntegerValueObservation a <dtmi:dtdl:class:Component> .
+
+rec:LuminanceObservation a <dtmi:dtdl:class:Component> .
+
+rec:RelativeHumidityObservation a <dtmi:dtdl:class:Component> .
+
+rec:TimeSpanObservation a <dtmi:dtdl:class:Component> .
+
+rec:TorqueObservation a <dtmi:dtdl:class:Component> .
+
+rec:VelocityObservation a <dtmi:dtdl:class:Component> .
+
+rec:VoltageObservation a <dtmi:dtdl:class:Component> .
+
+rec:VolumeFlowRateObservation a <dtmi:dtdl:class:Component> .
+
+brick:Equipment rdfs:subClassOf rec:Asset ;
+    sh:property [ a sh:PropertyShape ;
+            sh:name "feeds" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:feeds ],
+        [ a sh:PropertyShape ;
+            sh:name "is fed by" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:isFedBy ] .
+
+rec:AngleObservation a <dtmi:dtdl:class:Component> .
+
+rec:LengthObservation a <dtmi:dtdl:class:Component> .
+
+rec:PowerObservation a <dtmi:dtdl:class:Component> .
+
+rec:TemperatureObservation a <dtmi:dtdl:class:Component> .
+
+bsh:LastKnownDoubleShape a owl:Class,
+        sh:NodeShape ;
+    rdfs:subClassOf bsh:LastKnownValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "timestamp" ;
+            sh:path brick:timestamp ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:double ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "value" ;
+            sh:path brick:value ] .
+
+rec:Collection a sh:NodeShape .
+
+brick:value rdfs:subPropertyOf rec:value .
+
+rec:BooleanValueObservation a <dtmi:dtdl:class:Component> .
+
+rec:DoubleValueObservation a <dtmi:dtdl:class:Component> .
+

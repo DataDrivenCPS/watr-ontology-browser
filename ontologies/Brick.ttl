@@ -23547,6 +23547,7 @@ brick:Voltage_Ratio_Setpoint a owl:Class,
 brick:Volume a brick:Quantity ;
     rdfs:label "Volume" ;
     qudt:applicableUnit unit:AC-FT,
+        unit:AC-FT_US,
         unit:ANGSTROM3,
         unit:BBL,
         unit:BBL_UK_PET,
@@ -23569,6 +23570,7 @@ brick:Volume a brick:Quantity ;
         unit:L,
         unit:M3,
         unit:MI3,
+        unit:MI_UK3,
         unit:MegaL,
         unit:MicroL,
         unit:MicroM3,
@@ -23587,6 +23589,8 @@ brick:Volume a brick:Quantity ;
         unit:STR,
         unit:Standard,
         unit:TBSP,
+        unit:TON_Register,
+        unit:TON_SHIPPING_UK,
         unit:TON_SHIPPING_US,
         unit:TSP,
         unit:YD3 ;
@@ -24532,7 +24536,7 @@ bsh:Active_EnergyQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:KiloW-HR unit:W-HR unit:MegaW-HR ) ;
+            sh:in ( unit:W-HR unit:MegaW-HR unit:KiloW-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24572,7 +24576,7 @@ bsh:Alternating_Current_FrequencyQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:KiloHZ unit:HZ unit:GigaHZ unit:MegaHZ ) ;
+            sh:in ( unit:KiloHZ unit:MegaHZ unit:GigaHZ unit:HZ ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24587,7 +24591,7 @@ bsh:Ammonia_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24597,15 +24601,15 @@ bsh:Apparent_EnergyQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:KiloV-A-HR unit:MegaV-A-HR unit:V-A-HR ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:V-A-HR unit:MegaV-A-HR unit:KiloV-A-HR ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Atmospheric_PressureQuantityShape a owl:Class,
         sh:NodeShape,
@@ -24617,7 +24621,7 @@ bsh:Atmospheric_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
+            sh:in ( unit:MilliBAR unit:LB_F-PER-FT2 unit:CentiM_H2O unit:DecaPA unit:BARYE unit:PA unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:IN_H2O unit:MilliM_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:CentiBAR unit:PDL-PER-FT2 unit:MicroBAR unit:N-PER-M2 unit:MicroPA unit:FT_H2O_39dot2DEG_F unit:KIP_F-PER-IN2 unit:FT_HG unit:KiloGM_F-PER-CentiM2 unit:BAR unit:N-PER-CentiM2 unit:IN_HG_60DEG_F unit:CentiM_H20_4DEG_C unit:HectoBAR unit:KiloLB_F-PER-IN2 unit:DeciBAR unit:IN_HG_32DEG_F unit:HectoPA unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:KiloGM_F-PER-M2 unit:CentiM_HG_0DEG_C unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24645,15 +24649,15 @@ bsh:CO2_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PPB unit:PPM ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:CO_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
@@ -24665,7 +24669,7 @@ bsh:CO_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24701,7 +24705,7 @@ bsh:Current_AngleQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:in ( unit:GON unit:DEG unit:ARCSEC unit:ARCMIN unit:GRAD unit:MIL unit:MilliRAD unit:MilliARCSEC unit:REV unit:MicroRAD unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24796,7 +24800,7 @@ bsh:Differential_CO2_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24816,7 +24820,7 @@ bsh:Differential_CO_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24826,37 +24830,37 @@ bsh:Differential_Dynamic_PressureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:LB_F-PER-FT2 unit:CentiM_H2O unit:MilliBAR unit:DecaPA unit:BARYE unit:PA unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:MilliM_H2O unit:IN_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:MicroBAR unit:CentiBAR unit:FT_H2O_39dot2DEG_F unit:PDL-PER-FT2 unit:N-PER-M2 unit:MicroPA unit:KiloGM_F-PER-CentiM2 unit:KIP_F-PER-IN2 unit:IN_HG_60DEG_F unit:BAR unit:HectoPA unit:N-PER-CentiM2 unit:FT_HG unit:CentiM_H20_4DEG_C unit:DeciBAR unit:KiloLB_F-PER-IN2 unit:IN_HG_32DEG_F unit:HectoBAR unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:CentiM_HG_0DEG_C unit:KiloGM_F-PER-M2 unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Differential_Static_PressureQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MilliBAR unit:LB_F-PER-FT2 unit:CentiM_H2O unit:DecaPA unit:BARYE unit:PA unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:MilliM_H2O unit:IN_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:CentiBAR unit:PDL-PER-FT2 unit:MicroBAR unit:N-PER-M2 unit:MicroPA unit:FT_H2O_39dot2DEG_F unit:KIP_F-PER-IN2 unit:FT_HG unit:KiloGM_F-PER-CentiM2 unit:BAR unit:N-PER-CentiM2 unit:IN_HG_60DEG_F unit:HectoPA unit:HectoBAR unit:KiloLB_F-PER-IN2 unit:DeciBAR unit:IN_HG_32DEG_F unit:CentiM_H20_4DEG_C unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:KiloGM_F-PER-M2 unit:CentiM_HG_0DEG_C unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:N-PER-MilliM2 unit:BARAD unit:PSI unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MilliM_H2O unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:IN_H2O ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Differential_TemperatureQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
+            sh:in ( unit:DEG_F unit:PlanckTemperature unit:K unit:DEG_R unit:MilliDEG_C unit:DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24876,7 +24880,7 @@ bsh:Dry_Bulb_TemperatureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
+            sh:in ( unit:DEG_F unit:DEG_C unit:K ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -24886,15 +24890,15 @@ bsh:Electric_EnergyQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:W-HR unit:V-A-HR unit:V-A_Reactive-HR unit:J unit:KiloV-A_Reactive-HR unit:MegaV-A-HR unit:MegaW-HR unit:MegaV-A_Reactive-HR unit:KiloW-HR unit:KiloV-A-HR ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:V-A_Reactive-HR unit:W-HR unit:KiloV-A-HR unit:KiloV-A_Reactive-HR unit:KiloW-HR unit:J unit:MegaW-HR unit:MegaV-A-HR unit:MegaV-A_Reactive-HR unit:V-A-HR ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:EquivalentPropertyRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -24915,37 +24919,7 @@ bsh:Formaldehyde_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:FrequencyQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:PER-YR unit:GigaHZ unit:PER-WK unit:PER-MO unit:failures-in-time unit:PERCENT-PER-HR unit:HZ unit:PER-SEC unit:NUM-PER-YR unit:SAMPLE-PER-SEC unit:MegaHZ unit:TeraHZ unit:KiloHZ unit:NUM-PER-HR unit:NUM-PER-SEC unit:PERCENT-PER-DAY unit:PER-DAY unit:PER-MilliSEC unit:PER-MIN unit:PERCENT-PER-WK unit:PER-HR unit:PlanckFrequency ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:Gauge_PressureQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MilliM_H2O unit:LB_F-PER-IN2 unit:BAR unit:IN_H2O ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -24954,6 +24928,36 @@ bsh:Gauge_PressureQuantityShape a owl:Class,
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
+
+bsh:FrequencyQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:PER-MilliSEC unit:PERCENT-PER-HR unit:PER-MIN unit:SAMPLE-PER-SEC unit:PER-YR unit:TeraHZ unit:PERCENT-PER-DAY unit:PER-DAY unit:MegaHZ unit:PlanckFrequency unit:PPTH-PER-HR unit:PER-WK unit:PetaHZ unit:HZ unit:NUM-PER-YR unit:NUM-PER-SEC unit:failures-in-time unit:KiloHZ unit:PERCENT-PER-WK unit:NUM-PER-HR unit:PER-MO unit:PER-SEC unit:GigaHZ unit:PER-HR unit:MilliHZ unit:PERCENT-PER-MO ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
+
+bsh:Gauge_PressureQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:IN_H2O unit:MilliM_H2O unit:BAR unit:LB_F-PER-IN2 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:GrainsOfMoistureQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25049,7 +25053,7 @@ bsh:IrradianceQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:W-PER-CentiM2 unit:W-PER-FT2 unit:W-PER-IN2 unit:W-PER-M2 ) ;
+            sh:in ( unit:W-PER-M2 unit:W-PER-IN2 unit:W-PER-FT2 unit:W-PER-CentiM2 ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25112,15 +25116,15 @@ bsh:LevelQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:CentiM unit:DeciM unit:IN unit:KiloM unit:M unit:MicroM unit:MilliM unit:FT unit:YD ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:MilliM unit:MicroM unit:DeciM unit:YD unit:IN unit:M unit:FT unit:CentiM unit:KiloM ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Linear_SpeedQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25132,7 +25136,7 @@ bsh:Linear_SpeedQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:KiloM-PER-SEC unit:MI-PER-SEC unit:KiloM-PER-HR unit:MI-PER-HR unit:M-PER-SEC unit:M-PER-HR unit:FT-PER-HR unit:FT-PER-SEC ) ;
+            sh:in ( unit:M-PER-SEC unit:M-PER-HR unit:FT-PER-HR unit:MI-PER-SEC unit:FT-PER-SEC unit:KiloM-PER-HR unit:MI-PER-HR unit:KiloM-PER-SEC ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25202,22 +25206,22 @@ bsh:Methane_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:PPB unit:PPM ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:NO2_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25281,22 +25285,22 @@ bsh:Operative_TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_F unit:DEG_C unit:K ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Ozone_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25311,15 +25315,15 @@ bsh:PM10_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PPB unit:PPM unit:MicroGM-PER-M3 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:PM1_ConcentrationQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25331,7 +25335,7 @@ bsh:PM1_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM unit:MicroGM-PER-M3 ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25346,7 +25350,7 @@ bsh:PM2.5_ConcentrationQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
+            sh:in ( unit:PPB unit:PPM unit:MicroGM-PER-M3 ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25356,7 +25360,7 @@ bsh:Phasor_AngleQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:in ( unit:GON unit:DEG unit:ARCSEC unit:ARCMIN unit:GRAD unit:MIL unit:MilliRAD unit:MilliARCSEC unit:REV unit:MicroRAD unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25371,15 +25375,15 @@ bsh:Phasor_MagnitudeQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:GON unit:DEG unit:ARCSEC unit:ARCMIN unit:GRAD unit:MIL unit:MilliRAD unit:MilliARCSEC unit:REV unit:MicroRAD unit:RAD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:PointsHaveQuantityKinds a sh:NodeShape ;
     sh:property [ sh:class qudt:QuantityKind ;
@@ -25410,15 +25414,15 @@ bsh:PositionQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:PERCENT ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:PERCENT ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Power_FactorQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25440,7 +25444,22 @@ bsh:PrecipitationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:CentiM unit:DeciM unit:IN unit:KiloM unit:M unit:MicroM unit:MilliM unit:FT unit:YD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:MilliM unit:MicroM unit:DeciM unit:YD unit:IN unit:M unit:FT unit:CentiM unit:KiloM ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
+bsh:PressureQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:MilliBAR unit:LB_F-PER-FT2 unit:CentiM_H2O unit:DecaPA unit:PA unit:BARYE unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:IN_H2O unit:MilliM_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:CentiBAR unit:PDL-PER-FT2 unit:MicroBAR unit:N-PER-M2 unit:MicroPA unit:FT_H2O_39dot2DEG_F unit:FT_HG unit:KIP_F-PER-IN2 unit:KiloGM_F-PER-CentiM2 unit:BAR unit:N-PER-CentiM2 unit:IN_HG_60DEG_F unit:CentiM_H20_4DEG_C unit:HectoBAR unit:KiloLB_F-PER-IN2 unit:DeciBAR unit:IN_HG_32DEG_F unit:HectoPA unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:KiloGM_F-PER-M2 unit:CentiM_HG_0DEG_C unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25449,21 +25468,6 @@ bsh:PrecipitationQuantityShape a owl:Class,
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
-
-bsh:PressureQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:BAR unit:MicroTORR unit:KiloBAR unit:KiloPA unit:MegaBAR unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:PSI unit:N-PER-MilliM2 unit:BARAD unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:DYN-PER-CentiM2 unit:LB_F-PER-FT2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
 
 bsh:RDFSRangeRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -25517,7 +25521,7 @@ bsh:Radiant_TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
+            sh:in ( unit:DEG_F unit:DEG_C unit:K ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25532,22 +25536,22 @@ bsh:Radon_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:BQ-PER-M3 ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:BQ-PER-M3 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:Reactive_EnergyQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MegaV-A_Reactive-HR unit:KiloV-A_Reactive-HR unit:V-A_Reactive-HR ) ;
+            sh:in ( unit:KiloV-A_Reactive-HR unit:MegaV-A_Reactive-HR unit:V-A_Reactive-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25562,30 +25566,30 @@ bsh:Rotational_SpeedQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:RAD-PER-HR unit:DEG-PER-MIN unit:RAD-PER-SEC unit:DEG-PER-HR unit:DEG-PER-SEC unit:RAD-PER-MIN ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DEG-PER-MIN unit:DEG-PER-SEC unit:RAD-PER-SEC unit:RAD-PER-HR unit:DEG-PER-HR unit:RAD-PER-MIN ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Solar_IrradianceQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:W-PER-M2 unit:W-PER-IN2 unit:W-PER-FT2 unit:W-PER-CentiM2 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:W-PER-CentiM2 unit:W-PER-FT2 unit:W-PER-IN2 unit:W-PER-M2 ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:Solar_RadianceQuantityShape a owl:Class,
         sh:NodeShape,
@@ -25607,7 +25611,7 @@ bsh:SpeedQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MegaHZ-M unit:RAD-PER-SEC unit:KiloM-PER-SEC unit:RAD-PER-HR unit:GigaC-PER-M3 unit:DEG-PER-MIN unit:MI-PER-HR unit:M-PER-SEC unit:HZ-M unit:FT-PER-SEC unit:RAD-PER-MIN unit:DEG-PER-SEC unit:MI-PER-SEC unit:FT3-PER-MIN-FT2 unit:KiloM-PER-HR unit:BFT unit:M-PER-HR unit:FT-PER-HR unit:DEG-PER-HR unit:GigaHZ-M ) ;
+            sh:in ( unit:DEG-PER-MIN unit:M-PER-SEC unit:MicroM-PER-SEC unit:FT3-PER-MIN-FT2 unit:FT-PER-HR unit:GigaHZ-M unit:FT-PER-SEC unit:KiloM-PER-HR unit:YD-PER-MIN unit:DEG-PER-HR unit:MI-PER-HR unit:DEG-PER-SEC unit:KiloM-PER-SEC unit:BFT unit:RAD-PER-HR unit:MicroM-PER-MIN unit:M-PER-HR unit:IN-PER-YR unit:MegaHZ-M unit:RAD-PER-SEC unit:YD-PER-SEC unit:HZ-M unit:MI-PER-SEC unit:RAD-PER-MIN unit:YD-PER-HR ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25627,7 +25631,7 @@ bsh:Static_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:N-PER-M2 unit:DeciBAR unit:LB_F-PER-IN2 unit:N-PER-MilliM2 unit:BARAD unit:PSI unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:MilliM_H2O unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:IN_H2O ) ;
+            sh:in ( unit:MilliBAR unit:LB_F-PER-FT2 unit:CentiM_H2O unit:DecaPA unit:BARYE unit:PA unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:MilliM_H2O unit:IN_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:CentiBAR unit:PDL-PER-FT2 unit:MicroBAR unit:N-PER-M2 unit:MicroPA unit:FT_H2O_39dot2DEG_F unit:KIP_F-PER-IN2 unit:FT_HG unit:KiloGM_F-PER-CentiM2 unit:BAR unit:N-PER-CentiM2 unit:IN_HG_60DEG_F unit:HectoPA unit:HectoBAR unit:KiloLB_F-PER-IN2 unit:DeciBAR unit:IN_HG_32DEG_F unit:CentiM_H20_4DEG_C unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:KiloGM_F-PER-M2 unit:CentiM_HG_0DEG_C unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25649,15 +25653,15 @@ bsh:TVOC_ConcentrationQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:PPB unit:PPM unit:MicroGM-PER-M3 ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:PPM unit:MicroGM-PER-M3 unit:PPB ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:TagInferenceRule a sh:NodeShape ;
     sh:rule [ a sh:SPARQLRule ;
@@ -25676,7 +25680,7 @@ bsh:TemperatureQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
+            sh:in ( unit:DEG_F unit:PlanckTemperature unit:K unit:DEG_R unit:MilliDEG_C unit:DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25696,7 +25700,7 @@ bsh:Thermal_EnergyQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:KiloCAL unit:BTU_TH unit:THM_EEC unit:KiloJ unit:TON_FG-HR unit:KiloBTU_TH unit:THM_US unit:KiloCAL_IT unit:KiloBTU_IT unit:CAL_IT unit:BTU_IT unit:GigaJ unit:J unit:KiloCAL_Mean unit:CAL_MEAN unit:KiloCAL_TH unit:CAL_15_DEG_C unit:MegaJ unit:BTU_MEAN unit:CAL_TH ) ;
+            sh:in ( unit:THERM_US unit:KiloCAL_TH unit:KiloBTU_TH unit:KiloJ unit:MegaJ unit:THM_EEC unit:NanoJ unit:KiloCAL unit:BTU_IT unit:TON_FG-HR unit:CAL_MEAN unit:BTU_60DEG_F unit:BTU_39DEG_F unit:BTU_MEAN unit:BTU_59DEG_F unit:CAL_15_DEG_C unit:KiloCAL_IT unit:THERM_EC unit:KiloBTU_IT unit:GigaJ unit:KiloCAL_Mean unit:J unit:BTU_TH unit:THM_US unit:CAL_TH unit:CAL_20DEG_C unit:PicoJ unit:CAL_IT ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25706,15 +25710,15 @@ bsh:TimeQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:PlanckTime unit:MO unit:H-PER-KiloOHM unit:HR unit:SH unit:MilliH-PER-KiloOHM unit:H-PER-OHM unit:FemtoSEC unit:MegaYR unit:YR_Sidereal unit:POISE-PER-PA unit:YR_Common unit:KiloSEC unit:DAY_Sidereal unit:MilliSEC unit:PA-SEC-PER-BAR unit:WK unit:POISE-PER-BAR unit:MicroSEC unit:DeciSEC unit:MilliPA-SEC-PER-BAR unit:SEC unit:MicroH-PER-OHM unit:YR_TROPICAL unit:MO_MeanGREGORIAN unit:MegaSEC unit:MicroH-PER-KiloOHM unit:MIN_Sidereal unit:MilliH-PER-OHM unit:YR unit:HR_Sidereal unit:NanoSEC unit:KiloYR unit:MO_MeanJulian unit:PicoSEC unit:AttoSEC unit:YR_Metrology unit:CentiPOISE-PER-BAR unit:MIN unit:MO_Synodic unit:DAY ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:SH unit:SEC unit:MilliPA-SEC-PER-BAR unit:MicroSEC unit:MIN_Sidereal unit:NanoSEC unit:KiloYR unit:H-PER-OHM unit:PA-SEC-PER-BAR unit:MO_MeanJulian unit:DAY unit:YR_TROPICAL unit:MicroH-PER-KiloOHM unit:MegaYR unit:PlanckTime unit:POISE-PER-BAR unit:MilliH-PER-KiloOHM unit:KiloSEC unit:H-PER-KiloOHM unit:YR_Sidereal unit:WK unit:MO_Synodic unit:YR unit:MIN unit:MilliH-PER-OHM unit:HR unit:DAY_Sidereal unit:MicroH-PER-OHM unit:YR_Common unit:MO_MeanGREGORIAN unit:HR_Sidereal unit:MO unit:CentiPOISE-PER-BAR unit:PicoSEC unit:MilliSEC ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:TimeseriesReferenceOnPointsConstraint a sh:NodeShape ;
     sh:sparql [ a sh:SPARQLConstraint ;
@@ -25740,7 +25744,7 @@ bsh:Velocity_PressureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:FT_H2O unit:KiloGM_F-PER-MilliM2 unit:MicroBAR unit:PicoPA unit:IN_HG unit:PDL-PER-FT2 unit:PA unit:ATM_T unit:ATM unit:MicroATM unit:KiloBAR unit:BAR unit:MicroTORR unit:MegaBAR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloPA_A unit:DeciBAR unit:N-PER-M2 unit:LB_F-PER-IN2 unit:BARAD unit:PSI unit:N-PER-MilliM2 unit:GM_F-PER-CentiM2 unit:MicroPA unit:BARYE unit:IN_H2O unit:MegaPA unit:KiloLB_F-PER-IN2 unit:MilliM_HG unit:FT_HG unit:HectoBAR unit:MilliTORR unit:MilliBAR unit:MilliPA unit:MilliM_HGA unit:CentiBAR unit:KIP_F-PER-IN2 unit:DecaPA unit:KiloGM_F-PER-M2 unit:GigaPA unit:LB_F-PER-FT2 unit:DYN-PER-CentiM2 unit:CentiM_HG unit:MegaPSI unit:TORR unit:CentiM_H2O unit:N-PER-CentiM2 unit:PlanckPressure unit:HectoPA unit:KiloGM_F-PER-CentiM2 unit:MilliM_H2O ) ;
+            sh:in ( unit:LB_F-PER-FT2 unit:CentiM_H2O unit:MilliBAR unit:DecaPA unit:BARYE unit:PA unit:MegaPA unit:N-PER-MilliM2 unit:KiloN-PER-M2 unit:MilliM_HG unit:MicroATM unit:FT_H2O unit:LB_F-PER-IN2 unit:CentiM_HG unit:TORR unit:MegaPSI unit:KiloBAR unit:DYN-PER-CentiM2 unit:BARAD unit:GigaPA unit:IN_H2O_60DEG_F unit:MilliM_H2O unit:IN_H2O unit:IN_HG unit:PDL-PER-IN2 unit:PSI unit:MilliPA unit:MilliM_HGA unit:PlanckPressure unit:MicroTORR unit:KiloPA unit:KiloGM-PER-M-SEC2 unit:KiloGM_F-PER-MilliM2 unit:IN_H2O_39dot2DEG_F unit:MilliTORR unit:ATM_T unit:MicroBAR unit:CentiBAR unit:FT_H2O_39dot2DEG_F unit:PDL-PER-FT2 unit:N-PER-M2 unit:MicroPA unit:KiloGM_F-PER-CentiM2 unit:KIP_F-PER-IN2 unit:IN_HG_60DEG_F unit:BAR unit:HectoPA unit:N-PER-CentiM2 unit:FT_HG unit:CentiM_H20_4DEG_C unit:DeciBAR unit:KiloLB_F-PER-IN2 unit:IN_HG_32DEG_F unit:HectoBAR unit:GM_F-PER-CentiM2 unit:MegaBAR unit:PicoPA unit:CentiM_HG_0DEG_C unit:KiloGM_F-PER-M2 unit:ATM unit:KiloPA_A unit:M_H2O unit:CentiM_H2O_4DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25767,7 +25771,7 @@ bsh:Voltage_AngleQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:in ( unit:GON unit:DEG unit:ARCSEC unit:ARCMIN unit:GRAD unit:MIL unit:MilliRAD unit:MilliARCSEC unit:REV unit:MicroRAD unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -25777,37 +25781,7 @@ bsh:Voltage_ImbalanceQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:PERCENT ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:VolumeQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:DecaL unit:OZ_VOL_UK unit:GI_UK unit:MI3 unit:RT unit:DeciM3 unit:AC-FT unit:BBL unit:QT_US unit:FT3 unit:YD3 unit:DecaM3 unit:GT unit:Standard unit:PK_UK unit:MilliM3 unit:L unit:FBM unit:TBSP unit:HectoL unit:TSP unit:MilliL unit:QT_UK unit:STR unit:MegaL unit:BBL_US unit:ANGSTROM3 unit:MicroL unit:KiloL unit:PINT unit:FemtoL unit:DeciL unit:NanoL unit:PlanckVolume unit:IN3 unit:M3 unit:GI_US unit:Kilo-FT3 unit:PicoL unit:TON_SHIPPING_US unit:BBL_UK_PET unit:MicroM3 unit:CentiM3 unit:PINT_UK ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
-
-bsh:Wet_Bulb_TemperatureQuantityShape a owl:Class,
-        sh:NodeShape,
-        brick:EntityPropertyValue ;
-    rdfs:subClassOf bsh:ValueShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:DEG_C unit:K unit:DEG_F ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -25817,12 +25791,42 @@ bsh:Wet_Bulb_TemperatureQuantityShape a owl:Class,
             sh:or bsh:NumericValue ;
             sh:path brick:value ] .
 
+bsh:VolumeQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:TON_SHIPPING_US unit:PlanckVolume unit:AC-FT_US unit:BBL_UK_PET unit:AC-FT unit:MicroL unit:PINT_UK unit:MI3 unit:HectoL unit:PicoL unit:YD3 unit:MI_UK3 unit:DecaM3 unit:M3 unit:ANGSTROM3 unit:QT_US unit:KiloL unit:GI_US unit:BBL unit:TBSP unit:Kilo-FT3 unit:IN3 unit:DeciL unit:L unit:FT3 unit:TSP unit:MicroM3 unit:TON_Register unit:MilliM3 unit:DeciM3 unit:FBM unit:MilliL unit:MegaL unit:GI_UK unit:NanoL unit:Standard unit:OZ_VOL_UK unit:FemtoL unit:BBL_US unit:QT_UK unit:GT unit:TON_SHIPPING_UK unit:PK_UK unit:CentiM3 unit:PINT unit:RT unit:STR unit:DecaL ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
+
+bsh:Wet_Bulb_TemperatureQuantityShape a owl:Class,
+        sh:NodeShape,
+        brick:EntityPropertyValue ;
+    rdfs:subClassOf bsh:ValueShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:DEG_F unit:DEG_C unit:K ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
+
 bsh:Wind_DirectionQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:ARCSEC unit:MilliARCSEC unit:DEG unit:REV unit:GRAD unit:ARCMIN unit:MIL unit:MilliRAD unit:GON unit:RAD ) ;
+            sh:in ( unit:GON unit:DEG unit:ARCSEC unit:ARCMIN unit:GRAD unit:MIL unit:MilliRAD unit:MilliARCSEC unit:REV unit:MicroRAD unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -26303,19 +26307,27 @@ brick:Atmospheric_Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -26323,10 +26335,12 @@ brick:Atmospheric_Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -26345,6 +26359,7 @@ brick:Atmospheric_Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -26910,19 +26925,19 @@ brick:DeprecationShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            skos:definition "A SHACL rule which will mitigate the deprecation" ;
-            sh:class sh:NodeShape ;
-            sh:path brick:deprecationMitigationRule ],
+            skos:definition "The version in which the entity was deprecated" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path brick:deprecatedInVersion ],
         [ a sh:PropertyShape ;
             skos:definition "A message describing how to mitigate or address the deprecation" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
             sh:path brick:deprecationMitigationMessage ],
         [ a sh:PropertyShape ;
-            skos:definition "The version in which the entity was deprecated" ;
-            sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path brick:deprecatedInVersion ] .
+            skos:definition "A SHACL rule which will mitigate the deprecation" ;
+            sh:class sh:NodeShape ;
+            sh:path brick:deprecationMitigationRule ] .
 
 brick:Differential_Dry_Bulb_Temperature a brick:Quantity ;
     rdfs:label "Differential Dry Bulb Temperature" ;
@@ -31754,7 +31769,7 @@ brick:buildingThermalTransmittance a brick:EntityProperty ;
     rdfs:subPropertyOf brick:thermalTransmittance ;
     skos:definition "The area-weighted average heat transfer coefficient (commonly referred to as a U-value) for a building envelope" .
 
-brick:connectedTo a owl:IrreflexivProperty,
+brick:connectedTo a owl:IrreflexiveProperty,
         owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "Connected To" ;
@@ -32010,17 +32025,17 @@ bsh:AzimuthShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:in ( unit:GON unit:MilliARCSEC unit:ARCMIN unit:ARCSEC unit:MilliRAD unit:MIL unit:DEG unit:GRAD unit:REV unit:MicroRAD unit:MIN_Angle unit:RAD ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:maxInclusive 360 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:MilliARCSEC unit:ARCSEC unit:DEG unit:REV unit:MIN_Angle unit:GRAD unit:ARCMIN unit:MilliRAD unit:MIL unit:GON unit:RAD ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:value ] .
 
 bsh:BuildingPrimaryFunctionShape a owl:Class,
         sh:NodeShape,
@@ -32037,15 +32052,15 @@ bsh:CoolingCapacityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:TON_FG unit:BTU_IT-PER-HR unit:BTU_TH-PER-HR unit:W ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:CoordinateShape a owl:Class,
         sh:NodeShape,
@@ -32130,7 +32145,7 @@ bsh:TiltShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:MicroRAD unit:MilliARCSEC unit:ARCSEC unit:DEG unit:REV unit:MIN_Angle unit:GRAD unit:ARCMIN unit:MilliRAD unit:MIL unit:GON unit:RAD ) ;
+            sh:in ( unit:GON unit:MilliARCSEC unit:ARCMIN unit:ARCSEC unit:MilliRAD unit:MIL unit:DEG unit:GRAD unit:REV unit:MicroRAD unit:MIN_Angle unit:RAD ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -33403,19 +33418,27 @@ brick:Differential_Dynamic_Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -33423,10 +33446,12 @@ brick:Differential_Dynamic_Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -33445,6 +33470,7 @@ brick:Differential_Dynamic_Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -33511,19 +33537,27 @@ brick:Differential_Static_Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -33531,10 +33565,12 @@ brick:Differential_Static_Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -33553,6 +33589,7 @@ brick:Differential_Static_Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -38755,10 +38792,14 @@ brick:System_Enable_Command a owl:Class,
 
 brick:Thermal_Energy a brick:Quantity ;
     rdfs:label "Thermal Energy" ;
-    qudt:applicableUnit unit:BTU_IT,
+    qudt:applicableUnit unit:BTU_39DEG_F,
+        unit:BTU_59DEG_F,
+        unit:BTU_60DEG_F,
+        unit:BTU_IT,
         unit:BTU_MEAN,
         unit:BTU_TH,
         unit:CAL_15_DEG_C,
+        unit:CAL_20DEG_C,
         unit:CAL_IT,
         unit:CAL_MEAN,
         unit:CAL_TH,
@@ -38772,6 +38813,10 @@ brick:Thermal_Energy a brick:Quantity ;
         unit:KiloCAL_TH,
         unit:KiloJ,
         unit:MegaJ,
+        unit:NanoJ,
+        unit:PicoJ,
+        unit:THERM_EC,
+        unit:THERM_US,
         unit:THM_EEC,
         unit:THM_US,
         unit:TON_FG-HR ;
@@ -39549,15 +39594,15 @@ bsh:ThermalTransmittanceShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:BTU_IT unit:W-PER-M2-K ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:or bsh:NumericValue ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:BTU_IT unit:W-PER-M2-K ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ] .
 
 bsh:hasPointShape a sh:PropertyShape ;
     sh:class brick:Point ;
@@ -42245,11 +42290,16 @@ brick:Vertical_Space a owl:Class,
 
 brick:Voltage a brick:Quantity ;
     rdfs:label "Voltage" ;
-    qudt:applicableUnit unit:KiloV,
+    qudt:applicableUnit unit:FemtoV,
+        unit:GigaV,
+        unit:KiloV,
         unit:MegaV,
         unit:MicroV,
         unit:MilliV,
+        unit:NanoV,
+        unit:PicoV,
         unit:PlanckVolt,
+        unit:TeraV,
         unit:V,
         unit:V_Ab,
         unit:V_Stat ;
@@ -42556,7 +42606,7 @@ bsh:TemperatureShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:K unit:DEG_C unit:DEG_F unit:PlanckTemperature unit:MilliDEG_C unit:DEG_R ) ;
+            sh:in ( unit:DEG_F unit:PlanckTemperature unit:K unit:DEG_R unit:MilliDEG_C unit:DEG_C ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ],
@@ -44199,15 +44249,15 @@ bsh:AreaShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or bsh:NumericValue ;
-            sh:path brick:value ],
-        [ a sh:PropertyShape ;
             sh:in ( unit:FT2 unit:M2 ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:hasUnit ] .
+            sh:path brick:hasUnit ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:or bsh:NumericValue ;
+            sh:path brick:value ] .
 
 bsh:PowerQuantityShape a owl:Class,
         sh:NodeShape,
@@ -44669,14 +44719,19 @@ brick:Electric_Current a brick:Quantity ;
     qudt:applicableUnit unit:A,
         unit:A_Ab,
         unit:A_Stat,
+        unit:AttoA,
         unit:BIOT,
+        unit:FemtoA,
+        unit:GigaA,
         unit:KiloA,
         unit:MegaA,
         unit:MicroA,
         unit:MilliA,
         unit:NanoA,
+        unit:PetaA,
         unit:PicoA,
-        unit:PlanckCurrent ;
+        unit:PlanckCurrent,
+        unit:TeraA ;
     skos:related brick:Alternating_Current_Frequency,
         brick:Current_Angle,
         brick:Current_Imbalance,
@@ -45056,9 +45111,12 @@ brick:Temperature_Low_Reset_Setpoint a owl:Class,
 
 brick:Time a brick:Quantity ;
     rdfs:label "Time" ;
-    qudt:applicableUnit unit:CentiPOISE-PER-BAR,
+    qudt:applicableUnit unit:AttoSEC,
+        unit:CentiPOISE-PER-BAR,
         unit:DAY,
         unit:DAY_Sidereal,
+        unit:DeciSEC,
+        unit:FemtoSEC,
         unit:H-PER-KiloOHM,
         unit:H-PER-OHM,
         unit:HR,
@@ -45071,6 +45129,7 @@ brick:Time a brick:Quantity ;
         unit:MO_MeanGREGORIAN,
         unit:MO_MeanJulian,
         unit:MO_Synodic,
+        unit:MegaSEC,
         unit:MegaYR,
         unit:MicroH-PER-KiloOHM,
         unit:MicroH-PER-OHM,
@@ -45082,6 +45141,7 @@ brick:Time a brick:Quantity ;
         unit:NanoSEC,
         unit:PA-SEC-PER-BAR,
         unit:POISE-PER-BAR,
+        unit:POISE-PER-PA,
         unit:PicoSEC,
         unit:PlanckTime,
         unit:SEC,
@@ -45089,6 +45149,7 @@ brick:Time a brick:Quantity ;
         unit:WK,
         unit:YR,
         unit:YR_Common,
+        unit:YR_Metrology,
         unit:YR_Sidereal,
         unit:YR_TROPICAL ;
     skos:narrower brick:Acceleration_Time,
@@ -45136,19 +45197,27 @@ brick:Velocity_Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -45156,10 +45225,12 @@ brick:Velocity_Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -45178,6 +45249,7 @@ brick:Velocity_Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -45800,15 +45872,15 @@ bsh:Electric_CurrentQuantityShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            skos:definition "The ambient temperature at which the current input was measured" ;
-            sh:class bsh:TemperatureShape ;
-            sh:path brick:ambientTemperatureOfMeasurement ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:value ],
         [ a sh:PropertyShape ;
-            sh:in ( unit:MilliA unit:KiloA unit:PlanckCurrent unit:A_Stat unit:A unit:MegaA unit:NanoA unit:A_Ab unit:MicroA unit:PicoA unit:BIOT ) ;
+            skos:definition "The ambient temperature at which the current input was measured" ;
+            sh:class bsh:TemperatureShape ;
+            sh:path brick:ambientTemperatureOfMeasurement ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:FemtoA unit:A unit:KiloA unit:BIOT unit:PlanckCurrent unit:A_Ab unit:GigaA unit:TeraA unit:MegaA unit:NanoA unit:PicoA unit:MicroA unit:A_Stat unit:MilliA unit:AttoA unit:PetaA ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:hasUnit ] .
@@ -45818,27 +45890,27 @@ bsh:LastKnownValueShape a owl:Class,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:dateTime ;
-            sh:minCount 1 ;
-            sh:path brick:timestamp ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path brick:value ] .
+            sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:minCount 1 ;
+            sh:path brick:timestamp ] .
 
 bsh:VoltageQuantityShape a owl:Class,
         sh:NodeShape,
         brick:EntityPropertyValue ;
     rdfs:subClassOf bsh:ValueShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:in ( unit:V_Stat unit:MegaV unit:KiloV unit:PlanckVolt unit:V unit:MilliV unit:MicroV unit:V_Ab ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path brick:hasUnit ],
-        [ a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path brick:value ],
+        [ a sh:PropertyShape ;
+            sh:in ( unit:MicroV unit:NanoV unit:GigaV unit:MilliV unit:TeraV unit:PlanckVolt unit:FemtoV unit:V unit:V_Ab unit:V_Stat unit:PicoV unit:KiloV unit:MegaV ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path brick:hasUnit ],
         [ a sh:PropertyShape ;
             skos:definition "The ambient temperature at which the voltage was measured" ;
             sh:class bsh:TemperatureShape ;
@@ -46068,6 +46140,7 @@ brick:Frequency a brick:Quantity ;
         unit:HZ,
         unit:KiloHZ,
         unit:MegaHZ,
+        unit:MilliHZ,
         unit:NUM-PER-HR,
         unit:NUM-PER-SEC,
         unit:NUM-PER-YR,
@@ -46081,7 +46154,10 @@ brick:Frequency a brick:Quantity ;
         unit:PER-YR,
         unit:PERCENT-PER-DAY,
         unit:PERCENT-PER-HR,
+        unit:PERCENT-PER-MO,
         unit:PERCENT-PER-WK,
+        unit:PPTH-PER-HR,
+        unit:PetaHZ,
         unit:PlanckFrequency,
         unit:SAMPLE-PER-SEC,
         unit:TeraHZ,
@@ -46899,9 +46975,9 @@ brick:Speed a brick:Quantity ;
         unit:FT-PER-HR,
         unit:FT-PER-SEC,
         unit:FT3-PER-MIN-FT2,
-        unit:GigaC-PER-M3,
         unit:GigaHZ-M,
         unit:HZ-M,
+        unit:IN-PER-YR,
         unit:KiloM-PER-HR,
         unit:KiloM-PER-SEC,
         unit:M-PER-HR,
@@ -46909,9 +46985,14 @@ brick:Speed a brick:Quantity ;
         unit:MI-PER-HR,
         unit:MI-PER-SEC,
         unit:MegaHZ-M,
+        unit:MicroM-PER-MIN,
+        unit:MicroM-PER-SEC,
         unit:RAD-PER-HR,
         unit:RAD-PER-MIN,
-        unit:RAD-PER-SEC ;
+        unit:RAD-PER-SEC,
+        unit:YD-PER-HR,
+        unit:YD-PER-MIN,
+        unit:YD-PER-SEC ;
     skos:narrower brick:Linear_Speed,
         brick:Rotational_Speed ;
     brick:hasQUDTReference qudtqk:Speed .
@@ -47247,15 +47328,15 @@ brick:Collection a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Collection is an exclusive top class." ;
             sh:not [ sh:class brick:Point ] ] ;
-    sh:property [ a sh:PropertyShape ;
+    sh:property [ sh:message "A Collection can be associated with Equipments, Locations/Spaces, Points, and other Collections." ;
+            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class rec:Space ] [ sh:class brick:Point ] [ sh:class brick:Collection ] ) ;
+            sh:path brick:hasPart ],
+        [ a sh:PropertyShape ;
             sh:minCount 1 ;
             sh:name "includes" ;
             sh:nodeKind sh:IRI ;
             sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Collection ] ) ;
             sh:path rec:includes ],
-        [ sh:message "A Collection can be associated with Equipments, Locations/Spaces, Points, and other Collections." ;
-            sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class rec:Space ] [ sh:class brick:Point ] [ sh:class brick:Collection ] ) ;
-            sh:path brick:hasPart ],
         bsh:isMeteredByShape ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Collection ;
@@ -47525,19 +47606,27 @@ brick:Static_Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -47545,10 +47634,12 @@ brick:Static_Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -47567,6 +47658,7 @@ brick:Static_Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -47637,19 +47729,27 @@ brick:Pressure a brick:Quantity ;
         unit:BARAD,
         unit:BARYE,
         unit:CentiBAR,
+        unit:CentiM_H20_4DEG_C,
         unit:CentiM_H2O,
+        unit:CentiM_H2O_4DEG_C,
         unit:CentiM_HG,
+        unit:CentiM_HG_0DEG_C,
         unit:DYN-PER-CentiM2,
         unit:DecaPA,
         unit:DeciBAR,
         unit:FT_H2O,
+        unit:FT_H2O_39dot2DEG_F,
         unit:FT_HG,
         unit:GM_F-PER-CentiM2,
         unit:GigaPA,
         unit:HectoBAR,
         unit:HectoPA,
         unit:IN_H2O,
+        unit:IN_H2O_39dot2DEG_F,
+        unit:IN_H2O_60DEG_F,
         unit:IN_HG,
+        unit:IN_HG_32DEG_F,
+        unit:IN_HG_60DEG_F,
         unit:KIP_F-PER-IN2,
         unit:KiloBAR,
         unit:KiloGM-PER-M-SEC2,
@@ -47657,10 +47757,12 @@ brick:Pressure a brick:Quantity ;
         unit:KiloGM_F-PER-M2,
         unit:KiloGM_F-PER-MilliM2,
         unit:KiloLB_F-PER-IN2,
+        unit:KiloN-PER-M2,
         unit:KiloPA,
         unit:KiloPA_A,
         unit:LB_F-PER-FT2,
         unit:LB_F-PER-IN2,
+        unit:M_H2O,
         unit:MegaBAR,
         unit:MegaPA,
         unit:MegaPSI,
@@ -47679,6 +47781,7 @@ brick:Pressure a brick:Quantity ;
         unit:N-PER-MilliM2,
         unit:PA,
         unit:PDL-PER-FT2,
+        unit:PDL-PER-IN2,
         unit:PSI,
         unit:PicoPA,
         unit:PlanckPressure,
@@ -47719,7 +47822,10 @@ brick:Point a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Point is an exclusive top class." ;
             sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ a sh:PropertyShape ;
+    sh:property [ sh:maxCount 0 ;
+            sh:message "Points cannot have locations; use 'isPointOf' instead" ;
+            sh:path brick:hasLocation ],
+        [ a sh:PropertyShape ;
             sh:class brick:Quantity ;
             sh:name "has quantity" ;
             sh:nodeKind sh:IRI ;
@@ -47733,9 +47839,6 @@ brick:Point a owl:Class,
             sh:name "is point of" ;
             sh:nodeKind sh:IRI ;
             sh:path rec:isPointOf ],
-        [ sh:maxCount 0 ;
-            sh:message "Points cannot have locations; use 'isPointOf' instead" ;
-            sh:path brick:hasLocation ],
         bsh:hasQuantityShape,
         bsh:hasSubstanceShape,
         bsh:hasUnitShape,
@@ -47767,12 +47870,12 @@ brick:Location a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Location is an exclusive top class." ;
             sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ sh:or ( [ sh:class brick:Point ] ) ;
+    sh:property [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:hasPart ],
+        [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
+            sh:path brick:hasPart ],
+        [ sh:or ( [ sh:class brick:Point ] ) ;
             sh:path brick:hasPoint ],
-        [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
-            sh:path brick:hasPart ],
-        [ sh:or ( [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
-            sh:path brick:hasPart ],
         [ sh:or ( [ sh:class brick:Point ] ) ;
             sh:path brick:hasPoint ],
         [ sh:message "A Location's parts should be always be Locations/Spaces." ;
@@ -47949,13 +48052,15 @@ tag:Speed a brick:Tag ;
                 sdo:name "Jason Koh" ] ) ;
     dcterms:issued "2016-11-16" ;
     dcterms:license <https://github.com/BrickSchema/brick/blob/master/LICENSE> ;
-    dcterms:modified "2024-03-18" ;
+    dcterms:modified "2024-04-15" ;
     dcterms:publisher [ a sdo:Consortium ;
             sdo:legalName "Brick Consortium, Inc" ;
             sdo:sameAs <https://brickschema.org/consortium/> ] ;
     rdfs:isDefinedBy <https://brickschema.org/schema/1.4/Brick> ;
     rdfs:seeAlso <https://brickschema.org> ;
     owl:imports <http://data.ashrae.org/bacnet/2020>,
+        <http://qudt.org/2.1/collection/usertest>,
+        <http://qudt.org/2.1/schema/facade/qudt>,
         <http://qudt.org/2.1/schema/shacl/overlay/qudt>,
         <http://qudt.org/2.1/schema/shacl/qudt>,
         <http://qudt.org/2.1/vocab/dimensionvector>,
@@ -47966,22 +48071,22 @@ tag:Speed a brick:Tag ;
         <https://brickschema.org/schema/Brick/ref>,
         <https://w3id.org/rec/recimports> ;
     owl:versionInfo "1.4.0" ;
-    sh:declare [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
-            sh:prefix "sh" ],
-        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
-            sh:prefix "ref" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
-            sh:prefix "owl" ],
-        [ sh:namespace "https://w3id.org/rec#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "https://w3id.org/rec#"^^xsd:anyURI ;
             sh:prefix "rec" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+            sh:prefix "owl" ],
+        [ sh:namespace "http://data.ashrae.org/standard223#"^^xsd:anyURI ;
+            sh:prefix "s223" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "https://brickschema.org/schema/Brick#"^^xsd:anyURI ;
             sh:prefix "brick" ],
-        [ sh:namespace "http://data.ashrae.org/standard223#"^^xsd:anyURI ;
-            sh:prefix "s223" ] .
+        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
+            sh:prefix "ref" ],
+        [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+            sh:prefix "sh" ] .
 
 tag:Band a brick:Tag ;
     rdfs:label "Band" .
@@ -48033,10 +48138,10 @@ brick:HVAC_Equipment a owl:Class,
     rdfs:label "HVAC Equipment" ;
     rdfs:subClassOf brick:Equipment ;
     skos:definition "See Heating_Ventilation_Air_Conditioning_System"@en ;
-    sh:property [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] ) ;
-            sh:path brick:hasPart ],
-        [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] [ sh:class rec:Space ] ) ;
-            sh:path brick:feeds ] ;
+    sh:property [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] [ sh:class rec:Space ] ) ;
+            sh:path brick:feeds ],
+        [ sh:or ( [ sh:class brick:HVAC_Equipment ] [ sh:class brick:Valve ] ) ;
+            sh:path brick:hasPart ] ;
     sh:rule [ a sh:TripleRule ;
             sh:object tag:Equipment ;
             sh:predicate brick:hasTag ;
@@ -48104,22 +48209,14 @@ brick:Equipment a owl:Class,
             sh:not [ sh:class brick:Quantity ] ],
         [ sh:message "Equipment is an exclusive top class." ;
             sh:not [ sh:class brick:Collection ] ] ;
-    sh:property [ sh:or ( [ sh:class brick:Point ] ) ;
-            sh:path brick:hasPoint ],
-        [ sh:or ( [ sh:class rec:Space ] ) ;
+    sh:property [ sh:or ( [ sh:class rec:Space ] ) ;
             sh:path brick:hasLocation ],
         [ sh:or ( [ sh:class brick:Point ] ) ;
             sh:path brick:hasPoint ],
         [ sh:or ( [ sh:class rec:Space ] ) ;
             sh:path brick:hasLocation ],
-        [ a sh:PropertyShape ;
-            sh:name "feeds" ;
-            sh:nodeKind sh:IRI ;
-            sh:path rec:feeds ],
-        [ a sh:PropertyShape ;
-            sh:name "is fed by" ;
-            sh:nodeKind sh:IRI ;
-            sh:path rec:isFedBy ],
+        [ sh:or ( [ sh:class brick:Point ] ) ;
+            sh:path brick:hasPoint ],
         [ sh:class brick:Equipment ;
             sh:message "A piece of Equipment's parts should be always other Equipment." ;
             sh:path brick:hasPart ],
@@ -48132,6 +48229,14 @@ brick:Equipment a owl:Class,
         [ sh:message "A piece of Equipment can feed a Equipment or Location/Space." ;
             sh:or ( [ sh:class brick:Equipment ] [ sh:class brick:Location ] [ sh:class rec:Space ] ) ;
             sh:path brick:feeds ],
+        [ a sh:PropertyShape ;
+            sh:name "feeds" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:feeds ],
+        [ a sh:PropertyShape ;
+            sh:name "is fed by" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rec:isFedBy ],
         bsh:hasInputSubstanceShape,
         bsh:hasOutputSubstanceShape,
         bsh:hasPointShape,
