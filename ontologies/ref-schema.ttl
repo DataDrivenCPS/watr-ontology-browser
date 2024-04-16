@@ -4,26 +4,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix s223: <http://data.ashrae.org/standard223#> .
 @prefix sdo: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://brickschema.org/schema/Brick/ref> a owl:Ontology ;
-    dcterms:creator ( [ a sdo:Person ;
-                sdo:email "gtfierro@mines.edu" ;
-                sdo:name "Gabe Fierro" ] ) ;
-    dcterms:title "Ref Schema" ;
-    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
-            sh:prefix "ref" ],
-        [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
-            sh:prefix "sh" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
-            sh:prefix "owl" ] .
 
 ref:BACnetReferenceShape a sh:NodeShape ;
     skos:definition "Infers a BACnetReference instance from the object of an hasExternalReference." ;
@@ -42,7 +27,7 @@ ref:ExternalReferenceShape a sh:NodeShape ;
             sh:minCount 1 ;
             sh:path skos:definition ] ;
     sh:target [ a sh:SPARQLTarget ;
-            sh:prefixes ref: ;
+            sh:prefixes <https://brickschema.org/schema/Brick/ref> ;
             sh:select """
     SELECT ?this WHERE {
      ?this rdfs:subClassOf+ ref:ExternalReference .
@@ -129,6 +114,24 @@ bacnet:objectOf a owl:ObjectProperty ;
     rdfs:label "objectOf" ;
     rdfs:comment "The 'parent' BACnet device that hosts this BACnet object." ;
     rdfs:range bacnet:BACnetDevice .
+
+<https://brickschema.org/schema/Brick/ref> a owl:Ontology ;
+    dcterms:creator ( [ a sdo:Person ;
+                sdo:email "gtfierro@mines.edu" ;
+                sdo:name "Gabe Fierro" ] ) ;
+    dcterms:title "Ref Schema" ;
+    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://brickschema.org/schema/Brick/ref#"^^xsd:anyURI ;
+            sh:prefix "ref" ],
+        [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+            sh:prefix "sh" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+            sh:prefix "owl" ] .
 
 ref:BACnetURI a owl:DatatypeProperty ;
     rdfs:label "BACnetURI" ;
@@ -251,9 +254,10 @@ ref:TimeseriesReference a owl:Class,
 ref:ExternalReference a owl:Class,
         sh:NodeShape ;
     rdfs:label "External reference" ;
+    rdfs:subClassOf s223:ExternalReference ;
     skos:definition "The parent class of all external reference types" .
 
 ref:hasExternalReference a owl:ObjectProperty ;
     rdfs:label "hasExternalReference" ;
+    rdfs:subPropertyOf s223:hasExternalReference ;
     skos:definition "Points to the external reference for this entity, which contains additional metadata/data not included in this graph." .
-
