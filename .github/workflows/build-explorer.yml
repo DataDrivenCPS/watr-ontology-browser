@@ -41,7 +41,9 @@ jobs:
           npm i @rdf-toolkit/cli
 
       - name: Copy ontologies
-        run: cp -r ontologies/ rdf-toolkit/explorer/vocab/
+        run: |
+          cp -r ontologies/* rdf-toolkit/explorer/vocab/
+          ls rdf-toolkit/explorer/vocab
 
       - name: Copy config file
         run: cp rdfconfig.json rdf-toolkit/explorer/
@@ -56,21 +58,21 @@ jobs:
           npx rdf add file "http://www.w3.org/ns/shacl" vocab/shacl.ttl
           npx rdf add file "https://brickschema.org/schema/Brick/ref" vocab/ref-schema.ttl
           npx rdf add file "https://w3id.org/rec" vocab/rec.ttl
-          npx rdf make site
+          npx rdf make site --output public
 
       - name: handle brick 1.3
         working-directory: rdf-toolkit/explorer
         run: |
           git checkout package.json
           npx rdf add file "https://brickschema.org/schema/1.3/Brick" vocab/brick/1.3/Brick.ttl
-          npx rdf make site --output 1.3
+          npx rdf make site --output public/1.3
 
       - name: handle brick 1.4
         working-directory: rdf-toolkit/explorer
         run: |
           git checkout package.json
-          npx rdf add file "https://brickschema.org/schema/1.3/Brick" vocab/brick/1.3/Brick.ttl
-          npx rdf make site --output 1.4
+          npx rdf add file "https://brickschema.org/schema/1.4/Brick" vocab/brick/1.4/Brick.ttl
+          npx rdf make site --output public/1.4
 
       - name: Commit Built Files
         run: |
