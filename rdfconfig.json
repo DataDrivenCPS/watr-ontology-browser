@@ -37,6 +37,7 @@
     "expand": [
         "https://brickschema.org/schema/Brick#Equipment",
         "https://w3id.org/rec#Space"
-    ]
+    ],
+    "cleanUrls": false
   }
 }
