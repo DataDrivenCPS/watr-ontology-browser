@@ -3,12 +3,12 @@
 set -ex
 
 # make an array of Brick versions
-BRICK_VERSIONS="1.3 1.4"
+BRICK_VERSIONS="1.3 1.4 1.4.1 1.4.2"
 
 # Create a temporary directory
-TEMP_DIR=$(mktemp -d)
-#rm -rf /tmp/rdf-toolkit
-#TEMP_DIR=/tmp/rdf-toolkit
+#TEMP_DIR=$(mktemp -d)
+rm -rf /tmp/rdf-toolkit
+TEMP_DIR=/tmp/rdf-toolkit
 CURRENT_DIR=$(pwd)
 DEST=$CURRENT_DIR/site
 
@@ -63,3 +63,6 @@ for version in $BRICK_VERSIONS; do
     npx rdf add file "https://brickschema.org/schema/$version/Brick" $CURRENT_DIR/ontologies/brick/$version/Brick.ttl
     npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer"
 done
+
+# Run add_versions.py on all .html files in the site directory
+find "$DEST" -name "*.html" | xargs -n 1 -P 8 uv run "$CURRENT_DIR/add_versions.py"
