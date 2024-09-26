@@ -78,7 +78,7 @@ jobs:
           npx rdf make site --output public/1.4
 
       - name: rewrite for version navigation
-        run: find public -name "*.html" | xargs -n 1 -P 4 uv run add_versions.py
+        run: find rdf-toolkit/explorer/public -name "*.html" | xargs -n 1 -P 4 uv run add_versions.py
 
       - name: Commit Built Files
         run: |
