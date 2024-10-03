@@ -30,8 +30,11 @@ links = {
 
 select = soup.new_tag('select', {'id': 'brickVersionDropdown'})
 # create options
-for text, href in links.items():
-    option = soup.new_tag('option', value=href)
+for index,(text, href) in enumerate(links.items()):
+    if index == 0:
+        option = soup.new_tag('option', value=href, selected='selected')
+    else:
+        option = soup.new_tag('option', value=href)
     option.string = text
     select.append(option)
 # add the brickVersionDropdown id to the select tag
