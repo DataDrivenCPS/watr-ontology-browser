@@ -7,12 +7,13 @@
 from bs4 import BeautifulSoup
 import sys
 
-if len(sys.argv) != 2:
-    print("Usage: python add_versions.py <input_file>")
+if len(sys.argv) != 3:
+    print("Usage: python add_versions.py <base> <input_file>")
     sys.exit(1)
 
 # Define the file name of the existing HTML file
-input_file = sys.argv[1]
+base_dir = sys.argv[1]
+input_file = sys.argv[2]
 
 # Read the contents of the existing HTML file
 with open(input_file, 'r', encoding='utf-8') as file:
@@ -27,6 +28,16 @@ links = {
     "Brick v1.4": "/1.4",
     "Brick v1.3": "/1.3",
 }
+
+# if the input file starts with any value from the links dict, then
+# rewrite ALL data-href attributes to start with the corresponding value
+print(f"Check INPUT_FILE: {input_file.removeprefix(base_dir)}")
+input_file_end = input_file.removeprefix(base_dir)
+for text, href in links.items():
+    if input_file_end.startswith(href) and href != "/":
+        print(f"Rewriting all data-href attributes to start with {href}")
+        for a in soup.find_all('a', {'data-href': True}):
+            a['data-href'] = href + a['data-href']
 
 select = soup.new_tag('select', {'id': 'brickVersionDropdown'})
 # create options
@@ -74,7 +85,7 @@ if search_container:
     search_container.append(select_div)
 
     # Write the modified content back to a new file or overwrite the existing one
-    with open(sys.argv[1], 'w', encoding='utf-8') as file:
+    with open(sys.argv[2], 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
     print(f"Dropdown menu added successfully to {sys.argv[1]}.")

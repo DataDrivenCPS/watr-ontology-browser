@@ -47,7 +47,7 @@ npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" $CURRENT_DIR/ontologie
 npx rdf add file "http://www.w3.org/ns/shacl" $CURRENT_DIR/ontologies/shacl.ttl
 npx rdf add file "https://brickschema.org/schema/Brick/ref" $CURRENT_DIR/ontologies/ref-schema.ttl
 npx rdf add file "https://w3id.org/rec" $CURRENT_DIR/ontologies/rec.ttl
-npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer"
+npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer" --base ''
 
 # loop through and build the site for each version by calling './b2.sh <version>'
 for version in $BRICK_VERSIONS; do
@@ -60,9 +60,9 @@ for version in $BRICK_VERSIONS; do
   wget -O $CURRENT_DIR/ontologies/brick/$version/Brick.ttl https://brickschema.org/schema/$version/Brick.ttl
   #./b2.sh $version
     cd "$TEMP_DIR/explorer"
-    npx rdf add file "https://brickschema.org/schema/$version/Brick" $CURRENT_DIR/ontologies/brick/$version/Brick.ttl
-    npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer"
+    npx rdf add file "https://brickschema.org/schema/$version/Brick" $CURRENT_DIR/ontologies/brick/$version/Brick.ttl 
+    npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer" --base $version
 done
 
 # Run add_versions.py on all .html files in the site directory
-find "$DEST" -name "*.html" | xargs -n 1 -P 8 uv run "$CURRENT_DIR/add_versions.py"
+find "$DEST" -name "*.html" | xargs -n 1 -P 8 uv run "$CURRENT_DIR/add_versions.py" "$DEST"
