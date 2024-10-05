@@ -13,6 +13,7 @@ if len(sys.argv) != 3:
 
 # Define the file name of the existing HTML file
 base_dir = sys.argv[1]
+print(f"Check BASE_DIR: {base_dir}")
 input_file = sys.argv[2]
 
 # Read the contents of the existing HTML file

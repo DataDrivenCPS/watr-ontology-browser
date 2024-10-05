@@ -78,7 +78,7 @@ jobs:
           npx rdf make site --output public/1.4 -B 1.3
 
       - name: rewrite for version navigation
-        run: find rdf-toolkit/explorer/public -name "*.html" | xargs -n 1 -P 4 uv run add_versions.py `pwd`/rdf-toolkit/explorer/public
+        run: find rdf-toolkit/explorer/public -name "*.html" | xargs -n 1 -P 4 uv run add_versions.py /home/runner/work/ontology.brickschema.org/ontology.brickschema.org/rdf-toolkit/explorer/public
 
       - name: Commit Built Files
         run: |
