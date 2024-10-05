@@ -34,16 +34,18 @@ links = {
 # rewrite ALL data-href attributes to start with the corresponding value
 print(f"Check INPUT_FILE: {input_file.removeprefix(base_dir)}")
 input_file_end = input_file.removeprefix(base_dir)
+version = "/"
 for text, href in links.items():
     if input_file_end.startswith(href) and href != "/":
         print(f"Rewriting all data-href attributes to start with {href}")
+        version = href
         for a in soup.find_all('a', {'data-href': True}):
             a['data-href'] = href + a['data-href']
 
 select = soup.new_tag('select', {'id': 'brickVersionDropdown'})
 # create options
 for index,(text, href) in enumerate(links.items()):
-    if index == 0:
+    if href == version:
         option = soup.new_tag('option', value=href, selected='selected')
     else:
         option = soup.new_tag('option', value=href)
