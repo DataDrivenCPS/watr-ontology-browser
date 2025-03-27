@@ -3,7 +3,7 @@
 set -ex
 
 # make an array of Brick versions
-BRICK_VERSIONS="1.3 1.4 1.4.1 1.4.2"
+BRICK_VERSIONS="1.3 1.4 1.4.1 1.4.2 1.4.3"
 
 # Create a temporary directory
 #TEMP_DIR=$(mktemp -d)
@@ -19,6 +19,7 @@ git clone https://github.com/KrishnanN27/rdf-toolkit "$TEMP_DIR"
 cd "$TEMP_DIR"
 
 cp $CURRENT_DIR/rdfconfig.json "$TEMP_DIR/explorer/"
+cat $TEMP_DIR/explorer/rdfconfig.json
 
 # Install dependencies
 npm ci
