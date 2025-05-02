@@ -55,9 +55,8 @@ jobs:
         working-directory: rdf-toolkit/explorer
         run: |
           npx rdf add file "https://brickschema.org/schema/1.4/Brick" vocab/brick/latest/Brick.ttl
-          npx rdf add file "http://qudt.org/2.1/schema/shacl/qudt" vocab/SCHEMA_QUDT_NoOWL-v2.1.ttl
-          npx rdf add file "http://qudt.org/2.1/vocab/unit" vocab/VOCAB_QUDT-UNITS-ALL-v2.1.ttl
-          npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" vocab/VOCAB_QUDT-QUANTITY-KINDS-ALL-v2.1.ttl
+          npx rdf add file "http://qudt.org/2.1/vocab/unit" vocab/VOCAB_QUDT-UNITS-ALL.1.ttl
+          npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" vocab/VOCAB_QUDT-QUANTITY-KINDS-ALL.1.ttl
           npx rdf add file "http://www.w3.org/ns/shacl" vocab/shacl.ttl
           npx rdf add file "https://brickschema.org/schema/Brick/ref" vocab/ref-schema.ttl
           npx rdf add file "https://w3id.org/rec" vocab/rec.ttl
