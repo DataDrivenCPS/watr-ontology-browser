@@ -19,24 +19,13 @@
     },
     "outDir": "public",
     "roots": [
-      "https://brickschema.org/schema/Brick#Entity",
-      "http://qudt.org/schema/qudt/Aspect",
+      "urn:nawi-water-ontology/Class",
       "http://qudt.org/schema/qudt/Concept",
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "https://brickschema.org/schema/Brick#EntityProperty",
-      "https://w3id.org/rec#Agent",
-      "https://w3id.org/rec#Asset",
-      "https://w3id.org/rec#BuildingElement",
-      "https://w3id.org/rec#Collection",
-      "https://w3id.org/rec#Event",
-      "https://w3id.org/rec#Information",
-      "https://w3id.org/rec#Space",
       "http://www.w3.org/2000/01/rdf-schema#Class",
       "https://www.w3.org/2002/07/owl#Thing"
     ],
     "expand": [
-        "https://brickschema.org/schema/Brick#Equipment",
-        "https://w3id.org/rec#Space"
+        "urn:nawi-water-ontology/Class"
     ],
     "cleanUrls": false
   }

@@ -54,30 +54,12 @@ jobs:
       - name: Build site
         working-directory: rdf-toolkit/explorer
         run: |
-          npx rdf add file "https://brickschema.org/schema/1.4/Brick" vocab/brick/latest/Brick.ttl
+          npx rdf add file "urn:nawi-water-ontology" vocab/water.ttl
           npx rdf add file "http://qudt.org/2.1/vocab/unit" vocab/VOCAB_QUDT-UNITS-ALL.ttl
           npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" vocab/VOCAB_QUDT-QUANTITY-KINDS-ALL.ttl
           npx rdf add file "http://www.w3.org/ns/shacl" vocab/shacl.ttl
           npx rdf add file "https://brickschema.org/schema/Brick/ref" vocab/ref-schema.ttl
-          npx rdf add file "https://w3id.org/rec" vocab/rec.ttl
           npx rdf make site --output public
-
-      - name: handle brick 1.3
-        working-directory: rdf-toolkit/explorer
-        run: |
-          git checkout package.json
-          npx rdf add file "https://brickschema.org/schema/1.3/Brick" vocab/brick/1.3/Brick.ttl
-          npx rdf make site --output public/1.3 -B 1.3
-
-      - name: handle brick 1.4
-        working-directory: rdf-toolkit/explorer
-        run: |
-          git checkout package.json
-          npx rdf add file "https://brickschema.org/schema/1.4/Brick" vocab/brick/1.4/Brick.ttl
-          npx rdf make site --output public/1.4 -B 1.3
-
-      - name: rewrite for version navigation
-        run: find rdf-toolkit/explorer/public -name "*.html" | xargs -n 1 -P 4 uv run add_versions.py rdf-toolkit/explorer/public
 
       - name: Commit Built Files
         run: |
