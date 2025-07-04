@@ -19,7 +19,7 @@
     },
     "outDir": "public",
     "roots": [
-      "urn:nawi-water-ontology/Class",
+      "urn:nawi-water-ontology#Class",
       "http://qudt.org/schema/qudt/Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class",
       "https://www.w3.org/2002/07/owl#Thing"
