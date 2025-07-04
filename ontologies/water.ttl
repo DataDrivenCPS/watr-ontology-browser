@@ -1,3 +1,4 @@
+@prefix watr: <urn:nawi-water-ontology#> .
 <http://data.ashrae.org/standard223#LineLineVoltage-240V> <http://qudt.org/schema/qudt/hasUnit> <http://qudt.org/vocab/unit/V> ;
 	<http://www.w3.org/2000/01/rdf-schema#comment> "240V Line-Line Voltage" ;
 	<http://data.ashrae.org/standard223#hasVoltage> <http://data.ashrae.org/standard223#Voltage-240V> ;
