@@ -6,6 +6,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix watr: <urn:nawi-water-ontology#> .
 
 <urn:nawi-water-ontology#Class> a rdfs:Class,
         sh:NodeShape ;

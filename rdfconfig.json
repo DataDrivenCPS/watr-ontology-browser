@@ -25,7 +25,7 @@
       "https://www.w3.org/2002/07/owl#Thing"
     ],
     "expand": [
-        "urn:nawi-water-ontology/Class"
+        "urn:nawi-water-ontology#Class"
     ],
     "cleanUrls": false
   }
