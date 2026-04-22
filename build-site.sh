@@ -48,6 +48,8 @@ npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" $CURRENT_DIR/ontologie
 npx rdf add file "http://www.w3.org/ns/shacl" $CURRENT_DIR/ontologies/shacl.ttl
 npx rdf add file "https://brickschema.org/schema/Brick/ref" $CURRENT_DIR/ontologies/ref-schema.ttl
 npx rdf add file "https://w3id.org/rec" $CURRENT_DIR/ontologies/rec.ttl
+npx rdf add file "http://data.ashrae.org/standard223/1.0/model/all" $CURRENT_DIR/ontologies/223p.ttl
+
 npx rdf make site --output "$DEST/$version" --project "$TEMP_DIR/explorer" --base ''
 
 # loop through and build the site for each version by calling './b2.sh <version>'

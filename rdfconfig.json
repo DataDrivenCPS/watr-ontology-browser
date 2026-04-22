@@ -21,12 +21,14 @@
     "roots": [
       "urn:nawi-water-ontology#Class",
       "urn:nawi-water-ontology#Process",
+      "http://data.ashrae.org/standard223#Concept",
       "http://qudt.org/schema/qudt/Concept",
       "http://www.w3.org/2000/01/rdf-schema#Class",
       "https://www.w3.org/2002/07/owl#Thing"
     ],
     "expand": [
-        "urn:nawi-water-ontology#Class"
+        "urn:nawi-water-ontology#Class",
+      "http://data.ashrae.org/standard223#Concept"
     ],
     "cleanUrls": false
   }
